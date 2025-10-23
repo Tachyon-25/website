@@ -1,0 +1,31 @@
+.App {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(139, 0, 0, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 71, 171, 0.1) 0%, transparent 40%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 50px,
+      rgba(75, 0, 130, 0.03) 50px,
+      rgba(75, 0, 130, 0.03) 52px
+    ),
+    linear-gradient(to bottom, #000000, #0a0a0a);
+  background-attachment: fixed;
+}
+
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: transparent; /* Ensure sections have transparent background */
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}
+body{
+  background-color: black;
+}

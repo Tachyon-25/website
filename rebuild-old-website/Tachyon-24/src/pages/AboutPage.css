@@ -1,0 +1,531 @@
+@font-face {
+  font-family: "Lemon-Milk";
+  src: url("../../public/Fonts/LEMONMILK-Bold.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.content-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.aboutpage {
+  margin-bottom: 80px;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px;
+  background:
+  
+  url("../../public/deku.png"),
+  radial-gradient(circle at right,#222449, transparent 55%),
+  linear-gradient(to bottom, #222449  0px, transparent 130px),
+  radial-gradient(circle at left,#222449, transparent 35%); /* Your background image */
+  background-size:   360px 720px,100% 100%, 100% 100%, 100% 100%; /* Set sizes for each layer */
+  background-position:  95%  45%, center, top, center ; /* Position the gradient in the center and the image to the right */
+  background-repeat: no-repeat, no-repeat;
+}
+
+
+
+.details-box-1{
+  margin-top: 150px;
+}
+
+.details-box-1,
+.details-box-2,
+.details-box-3 {
+  width: 100%;
+  height: 25%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 12px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+.details-box-2,
+.details-box-3 {
+  margin-top: 40px;
+}
+
+.details-box-3{
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 32px;
+}
+
+.details-box-1-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: 60px;
+}
+
+#details-box-1-img {
+  width: 500px;
+  height: auto;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+#details-box-1-img:hover{
+  transform: scale(1.1);
+}
+
+.details-box-1-txt,
+.details-box-2-txt {
+  width: 30%;
+  text-align: justify;
+  font-size: 21px;
+
+}
+
+
+.details-box-2-txt {
+  width: 30%;
+  text-align: justify;
+  font-size: 21px;
+  margin-right: 250px;
+}
+
+.details-box-1-txt>span,
+.details-box-2-txt>span,
+.details-box-3-txt>span,
+.details-box-3-image-slider>span
+{
+  font-size: 28px;
+  color: #6bc1eb;
+  text-align: justify;
+  font-family: Lemon-Milk;
+
+}
+
+.details-box-1-txt > p,
+.details-box-2-txt > p,
+.details-box-3-txt > p{
+  opacity: 75%;
+  font-size: 18px;
+}
+
+.details-box-1-txt>span{
+
+  color: #6bc1eb;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-left: 4px;
+  margin-right: 4px;
+
+}
+
+.details-box-1-txt>span>img{
+  width: 200px;
+  height: 60px;
+}
+
+.details-box-3-image-slider > span{
+  font-size: 62px;
+  font-weight: 700;
+  color: #6bc1eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.details-box-2-bubbles {
+  width: 50%;
+  /* background: 
+  radial-gradient(circle at center,#222449,transparent 60%); */
+  /* radial-gradient(circle at 25% 25%,#151639,transparent 16%); */
+  
+}
+
+.bubbles-top,
+.bubbles-bottom,
+.bubbles-middle {
+  border: 3px solid #6bc1eb;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.bubbles-bottom,.bubbles-middle,.bubbles-top{
+  background: linear-gradient(to bottom,#222449, transparent 120%);
+}
+
+.bubbles-top,
+.bubbles-bottom {
+  margin-left: auto;
+
+  width: 170px;
+  height: 170px;
+}
+
+
+.bubbles-top {
+  top: 60px;
+  right: 160px;
+}
+
+.bubbles-bottom {
+  bottom: 80px;
+  right: 200px;
+}
+
+.bubbles-middle {
+  bottom: 35px;
+  margin-left: 5%;
+  width: 200px;
+  height: 200px;
+}
+
+.num-txt {
+  font-size: 32px;
+}
+
+.type-txt {
+  font-size: 12px;
+}
+
+.bubbles-top:hover,
+.bubbles-bottom:hover,
+.bubbles-middle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px 1px white;
+
+}
+
+.details-box-3-image-slider {
+  width: 50%;
+  transition: transform 0.4s ease;
+}
+
+.containerStyles {
+  align-items: center;
+  margin-top: 20px;
+  width: 800px;
+  height: 500px;
+}
+
+.details-box-3-image-slider:hover{
+  transform: scale(1.05);
+}
+
+
+.character-img{
+  width : auto;
+  height: 800px;
+}
+
+@media (max-width : 1471px) {
+  .details-box-1,.details-box-2,.details-box-3{
+    margin-bottom: 24px;
+  }
+  .bubbles-top,
+  .bubbles-bottom {
+    bottom: 50px;
+    right: 10px;
+    width: 170px;
+    height: 170px;
+  }
+
+  .bubbles-top {
+    top: 120px;
+    left: 5px;
+  }
+
+  .bubbles-middle {
+    margin-left: auto;
+    width: 200px;
+    height: 200px;
+    right: 190px;
+    top: 10px;
+  }
+  .containerStyles{
+    width: 600px;
+    height: 500px;
+  }
+  .details-box-3-image-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .details-box-3-image-slider > span {
+    font-size: 32px;
+  }
+
+}
+
+
+
+@media (max-width : 1200px) {
+  
+  .aboutpage{
+    background-position: right 57%, center, top;
+  }
+  .details-box-1,
+  .details-box-2,
+  .details-box-3 {
+    flex-wrap: wrap;
+  }
+
+  .details-box-1-txt,
+  .details-box-2-txt,
+  .details-box-3-txt {
+    width: 100%;
+  }
+
+  .details-box-2-txt{
+    margin-right: 0px;
+  }
+
+
+  .containerStyles {
+    width: 400px;
+    height: 250px;
+  }
+
+  .details-box-3-image-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .details-box-3-image-slider > span {
+    font-size: 32px;
+  }
+
+
+
+
+}
+
+
+@media (max-width : 1000px) {
+    
+  .details-box-1-txt > span > img{
+    width: 150px;
+    height: 42px;
+  }
+ 
+  .aboutpage{
+    background: 
+    url("../../public/deku.png"),
+    radial-gradient(circle at right,#222449, transparent 55%),
+    linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
+    background-size:   360px 720px,100% 100%, 100% 100%; /* Set sizes for each layer */
+    background-position:  95% 57%, center, top ; /* Position the gradient in the center and the image to the right */
+    background-repeat: no-repeat, no-repeat;
+  }
+  .details-box-2-bubbles {
+    width: 50%;
+    background: none;
+    /* radial-gradient(circle at 25% 25%,#151639,transparent 16%); */
+  }
+
+  .details-box-1-img{
+    margin: 0px;
+  }
+  
+}
+
+
+@media (max-width : 695px) {
+  .details-box-1-txt,
+  .details-box-2-txt,
+  .details-box-3-txt {
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .aboutpage{
+    background: 
+    url("../../public/deku.png"),
+    radial-gradient(circle at right,#222449, transparent 55%),
+    linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
+    background-size:   240px 520px,100% 100%, 100% 100%; /* Set sizes for each layer */
+    background-position:  90% 55%, 55%, top ; /* Position the gradient in the center and the image to the right */
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .details-box-1,.details-box-2,.details-box-3{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .bubbles-top,
+  .bubbles-bottom {
+    right: 100px;
+    width: 170px;
+    height: 170px;
+    margin-right: auto;
+  }
+
+
+  .bubbles-top {
+    top: 60px;
+    left: -100px;
+
+  }
+
+  .bubbles-bottom {
+    bottom: 80px;
+  }
+
+  .bubbles-middle {
+    margin-left: auto;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    left: 80px;
+  }
+
+  .containerStyles{
+    width: 400px;
+    height: 200px;
+  }
+  .details-box-3-image-slider
+  {
+    width: 100%;
+  }
+
+
+  #details-box-1-img{
+    width: 420px;
+    height: auto;
+  }
+}
+
+@media (max-width : 420px) {
+  .aboutpage{
+    background: 
+    url("../../public/deku.png"),
+    radial-gradient(circle at right,#222449, transparent 55%),
+    linear-gradient(to bottom, #222449  0px, transparent 130px); /* Your background image */
+    background-size:   210px 380px,100% 100%, 100% 100%; /* Set sizes for each layer */
+    background-position:  90% , center, top ; /* Position the gradient in the center and the image to the right */
+    background-repeat: no-repeat, no-repeat;
+  }
+
+
+  .containerStyles{
+    width: 320px;
+    height: 190px;
+  }
+  #details-box-1-img {
+    width: 300px;
+    height: auto;
+  }
+
+  .bubbles-top,
+  .bubbles-bottom {
+    right: 80px;
+    width: 120px;
+    height: 120px;
+    margin-right: auto;
+  }
+
+
+  .bubbles-top {
+    top: 50px;
+    left: -80px;
+
+  }
+
+  .bubbles-bottom {
+    bottom: 60px;
+  }
+
+  .bubbles-middle {
+    margin-left: auto;
+    top: 0px;
+    width: 130px;
+    height: 130px;
+    left: 50px;
+  }
+
+  .num-txt {
+    font-size: 24px;
+  }
+
+  .details-box-1-txt>span,
+  .details-box-2-txt>span,
+  .details-box-3-txt>span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #6bc1eb;
+
+  }
+  .details-box-3-txt{
+    margin-left: 18px;
+    margin-right: 8px;
+  }
+}
+
+
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.dots {
+  display: inline;
+}
+
+.more-text {
+  display: none;
+  color: #666; /* Optional: make the extra text a different color */
+}
+
+#read-more-btn {
+  margin-top: 10px;
+  background-color: #500a4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+#read-more-btn:hover{
+  transform: scale(1.1);
+}
+
+
+@media (max-width : 200px){
+  .details-box-1-txt,.details-box-2-txt,.details-box-3-txt{
+    font-size: 14px;
+  }
+  .containerStyles {
+    width: 150px;
+    height: 100px;
+}
+}

@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    to right,
+    #8B0000 0%,
+    #DC143C 25%,
+    #4B0082 50%,
+    #0047AB 75%,
+    #1E90FF 100%
+  ); /* Transformers gradient: Decepticons (red) to Autobots (blue) */
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}

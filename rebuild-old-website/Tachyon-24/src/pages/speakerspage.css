@@ -1,0 +1,214 @@
+.speakers-page {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  margin-top: 0;
+}
+
+.speakers-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: whitesmoke;
+}
+
+.speakers-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items */
+  justify-content: center; /* Centers items horizontally */
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.alumni-grid {
+  display: flex;
+  justify-content: center; /* Centers alumni speakers horizontally */
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  flex-wrap: wrap; /* Allows wrapping of alumni cards */
+  overflow-x: visible; /* Remove horizontal scroll on small screens */
+}
+
+.speaker-card {
+  height: 320px;
+  width: 320px; /* Card width */
+  cursor: pointer;
+  perspective: 1000px;
+  border: solid 1px white;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background-color: #ffffff;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.speaker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 1rem;
+  text-align: center;
+}
+
+.speaker-card:hover .speaker-overlay {
+  opacity: 1;
+}
+
+.speaker-name {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-role {
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+.card-back .card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-back .speaker-name {
+  color: gold;
+  margin-bottom: 0.5rem;
+}
+
+.card-back .speaker-role {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.speaker-details {
+  color: white;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsiveness */
+@media (max-width: 640px) {
+  .speakers-grid {
+    justify-content: center; /* Keep the items centered */
+  }
+
+  .speaker-card {
+    width: 100%; /* Make cards take up the full width on smaller screens */
+    max-width: 240px; /* Limit max width for smaller screens */
+    height: 100; /* Allow the height to adjust based on content */
+  }
+
+  .alumni-grid {
+    flex-wrap: wrap; /* Allow alumni cards to wrap on smaller screens */
+    overflow-x: visible; /* Remove horizontal scroll on small screens */
+  }
+
+  .alumni-grid .speaker-card {
+    max-width: 240px; /* Limit max width for alumni cards */
+    width: 100%; /* Cards fill available space */
+  }
+
+  .speaker-overlay {
+    padding: 0.5rem;
+  }
+
+  .speaker-name {
+    font-size: 1rem; /* Make the name smaller */
+  }
+
+  .speaker-role {
+    font-size: 0.75rem; /* Make the role smaller */
+  }
+
+  .speaker-details {
+    font-size: 0.75rem; /* Adjust details font size */
+  }
+
+  .social-button {
+    width: 35px;
+    height: 35px;
+  }
+}

@@ -1,0 +1,964 @@
+/* Page Layout */
+.events-page {
+  min-height: 100vh;
+  background: 
+    radial-gradient(circle at left, rgba(139, 0, 0, 0.4), transparent 55%),
+    radial-gradient(circle at right, rgba(0, 71, 171, 0.4), transparent 55%),
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 80px,
+      rgba(255, 255, 255, 0.02) 80px,
+      rgba(255, 255, 255, 0.02) 82px
+    ),
+    linear-gradient(to right, #8B0000 0%, #4B0082 50%, #0047AB 100%);
+  background-size: 360px 720px, 360px 720px, 100% 100%, 100% 100%;
+  background-position: left, right, center, center;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  position: relative;
+  padding: 10rem 2rem 2rem;
+  color: white;
+  box-shadow: 
+    inset 0 0 100px rgba(0, 0, 0, 0.5),
+    inset 20px 0 60px rgba(139, 0, 0, 0.2),
+    inset -20px 0 60px rgba(0, 71, 171, 0.2);
+}
+
+/* Content wrapper */
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  padding-top: 2rem;
+}
+
+/* Branch Card Specific Styles */
+.branch-card {
+  position: relative;
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  perspective: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.branch-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.branch-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%; /* Focus on upper part of image */
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+}
+
+.branch-card:hover .branch-image {
+  transform: scale(1.03); /* More subtle scale on hover */
+}
+
+.branch-card[data-branch="CSE"] .branch-image {
+  object-position: center 20%;
+}
+
+.branch-card[data-branch="ISF"] .branch-image {
+  object-position: center 40%;
+}
+
+.branch-card[data-branch="MES"] .branch-image {
+  object-position: center 30%;
+}
+
+.branch-card[data-branch="CE"] .branch-image,
+.branch-card[data-branch="CHE"] .branch-image,
+.branch-card[data-branch="IIC"] .branch-image {
+  object-position: center 25%;
+}
+
+.branch-icon {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.branch-card:hover .branch-icon {
+  opacity: 1;
+}
+
+.branch-card h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+}
+
+.branch-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+/* Club Card Specific Styles */
+.club-card {
+  position: relative;
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.club-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.club-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+}
+
+.club-card:hover .club-image {
+  transform: scale(1.05);
+}
+
+.club-icon {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.club-card:hover .club-icon {
+  opacity: 1;
+}
+
+.club-card h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  display: inline-block;
+}
+
+.club-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+/* Shared Card Base Styles for event cards */
+.event-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  perspective: 1000px;
+}
+
+/* Rotation effect */
+.event-card {
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  width: 500px;
+  height: 250px;
+}
+
+.event-card > .card-front, 
+.event-card > .card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.event-card p{
+  font-size: 30px;
+  margin-right: 33vh;
+  margin-top: 90%;
+
+}
+
+/* event-card */
+
+.events-table {
+  margin-top: 20px;
+}
+.Other-Event{
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.events-table table {
+  margin-bottom: 10vh;
+  width: 50%;
+  margin-left: 40vh;
+  border-collapse: collapse;
+}
+
+.events-table th, .events-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:30px ;
+  text-align: center;
+}
+
+.events-table th {
+  background-color:#0047AB;
+}
+
+.event-logo {
+  width: 50px;
+  height: auto;
+}
+
+.event-card .card-front {
+  transform: rotateY(0deg);
+  background-color: #f5f5f5;
+}
+
+.event-card.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.event-card .card-back {
+  transform: rotateY(-180deg);
+  background-color: #3a3a3a;
+  color: #fff;
+  padding: 20px;
+}
+
+.event-card.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back of the card when flipped */
+  transition: transform 0.6s;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push content to the top of the card */
+  align-items: center;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+.card-front h3,
+.card-front h4 {
+  position: absolute;
+  top: 78%; 
+  left: 20%;
+  text-align: center;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.card-front h3 {
+  font-size: 2rem; /* Adjust event name size */
+  margin-left: 5vh;
+}
+
+.card-front h4 {
+  font-size: 1.2rem; /* Adjust venue name size */
+  margin-top: 0.5rem; /* Space between event name and venue name */
+}
+.card-front p {
+  font-size: 27px;
+  margin-bottom: 9vh;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make the image cover the entire card */
+  position: absolute; /* Position image behind content */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Send image behind text content */
+}
+
+.card-back {
+  position: relative;
+ bottom:1%;
+
+  transform: rotateY(180deg);
+  padding: 0px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+  color: white;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.card-back p{
+  font-size: 1rem;
+  /* margin-right: 33vh; */
+  text-align: center;
+ 
+}
+
+.event-card.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.event-card.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.event-card .event-content,
+.event-card .event-description {
+  backface-visibility: hidden;
+}
+
+.event-card.clicked {
+  transform: rotateY(180deg); /* Rotate the card on click */
+}
+
+.event-boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Styles for the Other Events Grid */
+.events-box .event-boxes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  gap: 0; /* Remove gap between cards */
+  margin-top: 16px;
+  margin-bottom: 10vh;
+}
+
+
+.event-box {
+  padding: 8px; /* Reduced padding */
+  /* border: 1px solid #605c5c; */
+  width: 28vh;
+  /* margin-left: 70vh; */
+  border-radius: 8px;
+  
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+
+.event-box:hover {
+  transform: scale(1.05);
+}
+
+.event-box h4 {
+  margin-top: 0;
+}
+
+.event-box p {
+  margin: 4px 0;
+}
+
+
+/* Front side of the card */
+.event-card .event-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Back side of the card */
+
+.event-card .event-description {
+  display: none; /* Hide description by default */
+}
+
+.event-card.clicked .event-description {
+  opacity: 1; /* Make the description visible when the card is clicked */
+}
+
+.event-card.clicked {
+  transform: rotateY(180deg); /* Rotate the card */
+}
+
+/* The front and back faces should also follow the flip transitions */
+.card-front, .card-back {
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensure 3D effect is preserved */
+}
+
+/* Set initial back face hidden */
+.card-back {
+  transform: rotateY(180deg); /* Start with back face hidden */
+}
+
+/* Flip the card when clicked */
+.event-card.clicked .card-front {
+  transform: rotateY(180deg); /* Flip front to back */
+}
+
+.event-card.clicked .card-back {
+  transform: rotateY(0deg); /* Flip back to front */
+}
+
+
+.event-content h3,
+.event-content p {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0;
+}
+
+.event-details {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}
+/* Grid Layouts */
+.branches-container,
+.clubs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Event Card Specific Styles */
+.event-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.event-content p {
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.event-details {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}
+
+.flip-button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .branches-container,
+  .events-grid,
+  .clubs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .event-card {
+    min-height: 350px;
+    width: 50vh;
+  }
+
+  .event-card p {
+    font-size: 1.8rem;
+    margin-top: 46vh;
+    margin-left: -1vh;
+  }
+  
+  .event-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .event-content p {
+    font-size: 0.95rem;
+  }
+  
+  .event-details {
+    font-size: 0.9rem;
+  }
+  .events-table {
+    margin-top: 20px;
+  }
+  .Other-Event{
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+  }
+  
+  .events-table table {
+    margin-bottom: 10vh;
+    width: 80%;
+    margin-left: 6vh;
+    border-collapse: collapse;
+  }
+  
+  .events-table th, .events-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .events-table th {
+    background-color:#0047AB;
+    font-size: 40px;
+    color: white;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .events-page {
+    background: 
+      radial-gradient(circle at left, rgba(139, 0, 0, 0.4), transparent 55%),
+      radial-gradient(circle at right, rgba(0, 71, 171, 0.4), transparent 55%),
+      linear-gradient(to right, #8B0000 0%, #4B0082 50%, #0047AB 100%);
+    background-size: 360px 720px, 360px 720px, 100% 100%;
+    background-position: left, right, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  
+  .branches-container,
+  .clubs-container {
+    grid-template-columns: 1fr;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr; /* Makes items take full width in one column */
+    justify-items: center;      /* Centers the grid items */
+    padding: 20;                 /* Removes extra padding */
+    margin: 0 auto;             /* Centers the grid container itself */
+  }
+  
+  .branch-card,
+  .event-card,
+  .club-card {
+    min-height: 350px;
+  }
+  
+  .event-card {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .event-card:hover {
+    transform: scale(1.03); /* Smaller scale for hover */
+  }
+
+  .event-card img.event-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .branch-title {
+    font-size: 1.5rem;
+  }
+
+  .event-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .event-content p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+
+  .event-details {
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+  }
+
+  .branch-title {
+    font-size: 2rem;
+  }
+
+  .branch-icon {
+    font-size: 2rem;
+  }
+
+  .events-table {
+    margin-top: 20px;
+  }
+  .Other-Event{
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+  }
+  
+  .events-table table {
+    margin-bottom: 10vh;
+    width: 80%;
+    margin-left: 6vh;
+    border-collapse: collapse;
+  }
+  
+  .events-table th, .events-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .events-table th {
+    background-color:#0047AB;
+  }
+
+}
+
+/* Events Box Container */
+.events-box {
+  padding: 2rem;
+ 
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Optional: center text */
+  max-width: 1200px; /* Prevents stretching */
+  margin: 0 auto; /* Center the container */
+  min-height: 100vh; /* Full height for the container */
+  overflow: hidden; /* Prevents overflow on smaller screens */
+}
+
+/* Title of the section */
+.other-events {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align:left;
+  margin-right:83%;
+}
+
+/* Container for event boxes */
+.event-boxes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 3fr)); /* Ensures responsive grid */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center; /* Centers each item inside the grid */
+  align-items: start; /* Aligns items at the top for consistency */
+  max-width: 100%; /* Prevents the grid from stretching */
+  width: 100%; /* Ensures it takes full width */
+  padding: 0 1rem; /* Padding to avoid edges touching */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Each individual event box */
+.event-box {
+ 
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px; /* Keeps event boxes from stretching too wide */
+  text-align: left;
+  box-sizing: border-box; /* Includes padding in width */
+  margin: 0 auto; /* Centers event box */
+}
+.card-back-event {
+  margin-bottom: 10%;
+}
+.event-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+.event-p{
+  text-align: center;
+}
+/* Event Header (name and time) */
+.event-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.event-box-header h4 {
+  font-size: 1.5rem;
+  color:white ;
+}
+
+.event-time {
+  margin-top: 10%;
+  font-size: 1rem;
+  color: white;
+}
+
+/* More Info Button */
+.more-info-btn {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background-color: #0047AB;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.more-info-btn:hover {
+  background-color: #1E90FF;
+}
+
+.more-info-btn:focus {
+  outline: none;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .events-box {
+    padding: 1rem;
+  }
+
+  .event-boxes-container {
+    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    padding: 0; /* Remove unnecessary padding */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow event boxes to take up full width */
+    margin: 0; /* Remove any unwanted margin */
+  }
+
+  .event-box-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .event-time {
+    font-size: 0.9rem;
+  }
+
+  .more-info-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow full width on very small screens */
+  }
+
+  .event-box-header h4 {
+    font-size: 1rem;
+  }
+
+  .event-time {
+    font-size: 0.8rem;
+  }
+
+  .more-info-btn {
+    font-size: 0.8rem;
+  }
+}
+/* Container for event boxes */
+.event-boxes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); /* Ensures responsive grid */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center; /* Centers each item inside the grid */
+  align-items: start; /* Aligns items at the top for consistency */
+  max-width: 100%; /* Prevents the grid from stretching */
+  width: 100%; /* Ensures it takes full width */
+  padding: 0 1rem; /* Padding to avoid edges touching */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .events-box {
+    padding: 1rem;
+  }
+
+  .event-boxes-container {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* Reduce the min-width on smaller screens */
+    padding: 0; /* Remove unnecessary padding */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow event boxes to take up full width */
+    margin: 0; /* Remove any unwanted margin */
+  }
+
+  .event-box-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .event-time {
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .more-info-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-boxes-container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Reduce the min-width on smaller screens */
+    padding: 0; /* Remove unnecessary padding */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .event-box {
+    padding: 1rem;
+    max-width: 100%; /* Allow full width on very small screens */
+  }
+
+  .event-box-header h4 {
+    font-size: 1rem;
+  }
+
+  .event-time {
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  .more-info-btn {
+    font-size: 0.8rem;
+  }
+}

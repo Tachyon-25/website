@@ -1,0 +1,63 @@
+/* payment.css */
+
+.payment {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 17vw;
+    padding: 20px;
+    margin-bottom: 100vw;
+    text-align: center;
+    background-color: #1d1919;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ebdbdb;
+}
+
+.payment p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #cdbcbc;
+}
+
+.payment button {
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment button:hover {
+    background-color: #1c1d1e;
+}
+
+.payment button:focus {
+    outline: none;
+}
+
+.payment .payment-details {
+    margin-bottom: 20px;
+}
+
+.payment .payment-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.payment .payment-info a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.payment .payment-info a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Lemon-Milk";
+    src: url("../../public/Fonts/LEMONMILK-Bold.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.MerchSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+}
+
+.Merchtitle{
+    color: white;
+    font-size: 82px;
+    font-family:  Lemon-Milk;
+    margin-top: 80px;
+    opacity: 80%;
+    margin-bottom: 100px;
+}
+.MerchPromo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    gap : 50%;
+}
+
+.MerchImageFront,.MerchImageBack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+
+
+#MerchImageFront,#MerchImageBack{
+    width: 500px;
+    height: 500px;
+}
+
+.MerchImageBack{
+    display: none;
+}
+
+
+
+
+#buynowbtn{
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: #ee4e1c;
+    transition: transform 0.25s ease-in-out;
+    border: none;
+    text-align: center;
+    font-family: Lemon-Milk;
+    color: white;
+    font-size: 18px;
+}
+
+#buynowbtn:hover {
+    background-color: green;
+    transform: scale(1.2);
+}
+
+#buynowbtn:hover .buynowbtn{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #ee4e1c, transparent);    
+}
+
+@media (max-width:1024px){
+    .MerchPromo{
+        gap : 5%;
+    }
+    #buynowbtn{
+        width: 150px;
+        height: 50px;
+    }
+    .buynowbtn{
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width:719px){
+    .Merchtitle{
+        font-size: 300%;
+        margin-bottom: 50px;
+    }
+    .MerchPromo{
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+    .MerchImageBack,.MerchImageFront{
+        margin-bottom: 25px;
+    }
+    #MerchImageFront, #MerchImageBack{
+        width: 90%;
+        height: 90%;
+    }
+    .buynowbtn{
+        padding: 12px;
+        margin: 18px;
+    }
+    #buynowbtn{
+        width: 200px;
+        height: 50px;
+    }
+}

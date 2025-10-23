@@ -1,0 +1,387 @@
+@font-face {
+    font-family: "Lemon-Milk";
+    src: url("../../../public/Fonts/LEMONMILK-Bold.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* Container styles */
+.merchandise {
+    width: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 15vh;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: Lemon-Milk;
+    background:    
+    linear-gradient(to bottom, black 5%, transparent 35%, black 63%),
+    linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
+    
+    url("../../../public/mangapanel3.jpg"),
+    linear-gradient(to bottom, #fc5f3c, transparent 70%);
+    background-position: center 15%;
+    background-size: 100% 100%,100% 100%, 100% 55%,  100% 100%;
+    background-repeat: no-repeat;
+}
+
+.merchandise::before{
+    filter: blur(5px);
+}
+.merchandise h1{
+    margin-top: 50px;
+}
+/* Carousel container */
+.merchimg {
+    width: 100%;
+    height: 60vh; /* Changed from aspect-ratio to fixed height for desktop */
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Bootstrap Carousel overrides */
+.carousel {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; /* Added padding to prevent image touching edges */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; /* Allow image to maintain aspect ratio */
+    height: auto; /* Allow image to maintain aspect ratio */
+    object-fit: contain;
+    border-radius: 0;
+}
+
+/* Rest of your existing styles... */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .merchandise {
+        width: 95%;
+        padding: 1.5rem;
+        padding-top: max(3rem, 8vh);
+    }
+    .merchandise-form{
+        flex-wrap: wrap;
+    }
+    .merchimg {
+        height: 40vh; /* Adjusted for mobile */
+    }
+
+    .carousel-item {
+        padding: 0.5rem; /* Less padding on mobile */
+    }
+}
+
+/* Additional carousel controls styling */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-indicators {
+    margin-bottom: 0.5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+/* Typography */
+.merchandise h1 {
+    font-size: 3rem;
+    color:#fc5f3c;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 10vh;
+}
+
+.merchandise h3 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+/* Form elements */
+.merchandise select,
+.merchandise input {
+    width: 100%;
+    padding: 0.875rem;
+    margin-bottom: 1rem;
+    background-color: #2a2a2c;
+    color: white;
+    border: 2px solid #404042;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.merchandise select:hover,
+.merchandise input:hover {
+    background-color: black;
+}
+
+.merchandise select:focus,
+.merchandise input:focus {
+    border-color: #61dafb;
+    background-color: #2f2f31;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+}
+
+.merchandise input::placeholder {
+    color: #999;
+}
+
+/* Button styles */
+.merchandise button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    
+    background-color: #61dafb;
+    color: #1c1c1e;
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
+}
+
+.merchandise button:enabled:hover {
+    background-color: #e6574d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(97, 218, 251, 0.3);
+}
+
+.merchandise button:enabled:active {
+    transform: translateY(0);
+}
+
+.merchandise button:disabled {
+    background-color: #404042;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .merchandise {
+        width: auto;
+        padding: 1.5rem;
+        padding-top: max(3rem, 8vh);
+    }
+    
+    .merchimg {
+        aspect-ratio: 3/4;
+    }
+}
+
+/* Optional: Add loading state styles */
+.merchandise button.loading {
+    background-color: #404042;
+    cursor: wait;
+    position: relative;
+    overflow: hidden;
+}
+
+.merchandise button.loading::after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    100% {
+        left: 100%;
+    }
+}
+/* Form Container */
+.merchandise-form {
+    width: 100%;
+    padding: 2rem;
+    background-color: transparent;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.user-select-size{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    width: 25%;
+}
+
+
+/* General Form Group */
+.form-group {
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+}
+
+.select-form-group {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Heading Style */
+.form-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+
+/* Select Style */
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+/* Input Field Style */
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-input::placeholder {
+    color: #ffffff;
+}
+
+/* Button Style */
+.form-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+    margin-bottom: 70%;
+}
+
+.form-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .merchandise-form {
+        padding: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .user-info, .user-select-size{
+        width: 100%;
+        margin: 12px;
+    }
+    .form-input, .form-select {
+        padding: 0.8rem;
+    }
+
+    .form-button {
+        padding: 0.8rem 1.5rem;
+    }
+    .merchandise{
+        background: 
+        linear-gradient(to bottom, black 5%, transparent 50%, black 55%),
+        linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
+        url("../../../public/mangapanel4.jpg"),
+        linear-gradient(to bottom, #fc5f3c, transparent 70%);
+        background-position: center 12%;
+        background-size: 100% 100%, 100% 100%, 100% 50%,  100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .merchandise h1{
+        font-size: 1.5rem;
+    }
+
+    .merchandise-form{
+        margin-top: 20px;
+        background : linear-gradient(to bottom, rgb(21, 21, 21), rgb(21, 21, 21) 45%, transparent 70%)
+    }
+}
+
