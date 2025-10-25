@@ -58,7 +58,6 @@ function App() {
                 <MerchSection />
                 <EventsSection />
                 <FlipCard2 />
-
                 <Footer />
               </>
             }

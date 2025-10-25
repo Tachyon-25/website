@@ -125,11 +125,11 @@ const Hero = () => {
         
         <div className="horizontal-line"></div>
         <div className="scrolling-text">
-          {Array(8).fill(<div className="scrolling-text-item">Tachyon!</div>)}
+          {Array(8).fill(<div className="scrolling-text-item">Tachyon 2025!</div>)}
         </div>
         <div className="horizontal-line"></div>
         <div className="icon-show">
-          <img src="/transformersImages/WhatsApp Image 2025-10-21 at 12.03.43 PM.jpeg" alt="Transformers Icon" className="icon-center" />
+          <img src="/transformersImages/optimusprime-removebg-preview.png" alt="Transformers Icon" className="icon-center" />
         </div>
         <div className="particle-container">
           {particles.map((particle) => (
