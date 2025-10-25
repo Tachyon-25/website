@@ -146,7 +146,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
 }
 
@@ -172,7 +172,7 @@
 }
 
 .image_character_tabs {
-  height: 100vh;
+  height: 120vh;
   width: 75vh;
   object-fit: cover;
 }
