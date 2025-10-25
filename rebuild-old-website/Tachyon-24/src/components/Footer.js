@@ -74,7 +74,7 @@ const Footer = () => {
 
     return (
         <div className="footer_section">
-            <div className="red-line"></div>
+            
             <div className="container">
                 <div className="wrap_footer">
                     <div className="divider_footer"></div>
