@@ -1,75 +1,42 @@
 .footer_section {
-  background: 
-    linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(139, 0, 0, 0.3) 15%,
-      rgba(75, 0, 130, 0.4) 50%,
-      rgba(0, 71, 171, 0.3) 85%,
-      rgba(0, 0, 0, 0.85) 100%
-    ),
-    radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(30, 144, 255, 0.15) 0%, transparent 50%),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 4px,
-      rgba(255, 255, 255, 0.01) 4px,
-      rgba(255, 255, 255, 0.01) 8px
-    ),
-    linear-gradient(to bottom, #0a0a0a, #000000);
+  /* Subdued dark theme background for the footer to blend with site */
+  background: linear-gradient(180deg, #060606 0%, #0b0b0b 50%, #080808 100%);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  color: white;
-  box-shadow: 
-    inset 0 10px 30px rgba(220, 20, 60, 0.1),
-    inset 0 -10px 30px rgba(30, 144, 255, 0.1),
-    0 -5px 30px rgba(75, 0, 130, 0.2);
-  animation: footerGlow 6s ease-in-out infinite;
+  color: #e6e6e6; /* slightly off-white for readability */
+  /* subtle inner glow rather than colorful highlights */
+  box-shadow: inset 0 8px 24px rgba(0,0,0,0.6), 0 -4px 18px rgba(0,0,0,0.6);
+  animation: footerGlowDark 10s ease-in-out infinite;
 }
 
-@keyframes footerGlow {
+@keyframes footerGlowDark {
   0%, 100% {
-    box-shadow: 
-      inset 0 10px 30px rgba(220, 20, 60, 0.1),
-      inset 0 -10px 30px rgba(30, 144, 255, 0.1),
-      0 -5px 30px rgba(75, 0, 130, 0.2);
+    box-shadow: inset 0 6px 18px rgba(0,0,0,0.6), 0 -3px 12px rgba(0,0,0,0.55);
   }
   50% {
-    box-shadow: 
-      inset 0 10px 40px rgba(220, 20, 60, 0.2),
-      inset 0 -10px 40px rgba(30, 144, 255, 0.2),
-      0 -5px 40px rgba(75, 0, 130, 0.3);
+    box-shadow: inset 0 8px 22px rgba(0,0,0,0.65), 0 -4px 14px rgba(0,0,0,0.6);
   }
 }
 
 .footer_section::before {
+  /* subtle sweep to add motion without bright colors */
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
+  left: -120%;
+  width: 120%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(30, 144, 255, 0.1),
-    transparent
-  );
-  animation: energonSweep 8s linear infinite;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.02) 50%, transparent 100%);
+  animation: energonSweepDark 12s linear infinite;
 }
 
-@keyframes energonSweep {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 200%;
-  }
+@keyframes energonSweepDark {
+  0% { left: -120%; }
+  100% { left: 120%; }
 }
 
 /* Transformers gradient line at the top */
@@ -186,14 +153,19 @@
   height: 120px;
   width: auto;
   display: block;
-  animation: transformerReveal 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  /* Make the logo completely static: remove reveal animation and any transitions */
+  animation: none !important;
+  transform: none !important;
   filter: drop-shadow(0 0 20px rgba(30, 144, 255, 0.3));
-  transition: filter 0.3s ease;
+  transition: none !important;
 }
 
 .logo_footer:hover {
+  /* Keep glow on hover but avoid any float/translate animation so the logo remains static */
   filter: drop-shadow(0 0 30px rgba(30, 144, 255, 0.6)) drop-shadow(0 0 40px rgba(220, 20, 60, 0.4));
-  animation: logoFloat 2s ease-in-out infinite;
+  /* remove animation to prevent movement when pointer leaves */
+  animation: none !important;
+  transform: none !important;
 }
 
 @keyframes transformerReveal {
