@@ -15,6 +15,9 @@
   );
 }
 
+/* Import a transformer-style display font for the scrolling Tachyon text */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
+
 /* Hero Section */
 .hero {
   margin: 0 !important;
@@ -514,7 +517,7 @@
   display: flex;
   animation: scroll-text 35s linear infinite;
   white-space: nowrap;
-  font: 900 288px "Futura font", sans-serif;
+  font: 900 288px 'Orbitron', "Futura", sans-serif;
   text-transform: uppercase;
   line-height: 100%;
   padding: 100px 0;
@@ -525,6 +528,7 @@
   display: inline-block;
   padding: 0 50px;
   color: transparent;
+  font-family: 'Orbitron', 'Futura', sans-serif;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
