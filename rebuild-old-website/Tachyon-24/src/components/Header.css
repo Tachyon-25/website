@@ -21,10 +21,10 @@
 }
 
 .logo img {
-  width: 200px;
+  width: 300px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  transform: scale(0.7);
+  transform: scale(1.1);
   margin-left: 8vh;
 }
 

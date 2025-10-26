@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 // import { Link } from 'lucide-react';
 import './Footer.css';
-import footerLogo from '../assests/footer-logo.png'
+import footerLogo from '../assests/tachyon_25.png'
 
 const Footer = () => {
     useEffect(() => {

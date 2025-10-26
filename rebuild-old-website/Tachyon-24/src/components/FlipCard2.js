@@ -10,112 +10,155 @@ const FlipSlider = () => {
       name: "CSE",
       content: [
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.38 AM.jpeg",
+          imgSrc: "/ultimate/devlopment.jpg",
           logoSrc: "dev.png",
           title: "CSI DEVELOPMENT",
           club: "CSI-Development",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.39 AM.jpeg",
+          imgSrc: "/ultimate/bitwise.jpg",
           logoSrc: "bitwise.png",
           title: "CSI BITWISE",
           club: "CSI-Bitwise",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.40 AM.jpeg",
+          imgSrc: "/ultimate/botnet.jpg",
           logoSrc: "botnet.png",
           title: "CSI BOTNET",
           club: "CSI-Botnet",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.51 AM.jpeg",
+          imgSrc: "/ultimate/vrarmr_02.jpg",
           logoSrc: "arvrmr.png",
           title: "VR AR MR",
           club: "VR+AR+MR",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.53 AM.jpeg",
+          imgSrc: "/ultimate/mozilla_02.jpg",
           logoSrc: "MOZILLA.png",
           title: "MOZILLA",
           club: "Mozilla",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.54 AM.jpeg",
+          imgSrc: "/ultimate/rospinot.jpg",
           logoSrc: "rospinot.png",
           title: "ROSPINOT",
           club: "Rospinot",
         },
-        { imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.55 AM.jpeg", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
+        // { imgSrc: "/ultimate/multimedia.png", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.56 AM.jpeg",
+          imgSrc: "/ultimate/multimedia.png",
           logoSrc: "MMUIUX-BLACK.png",
           title: "CSI MULTIMEDIA",
           club: "CSI-MM%26UI%2FUX",
         },
-        { imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.57 AM.jpeg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
+        { imgSrc: "/ultimate/gfg.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.38 AM.jpeg",
+          imgSrc: "/ultimate/devlopment.jpg",
           logoSrc: "dev.png",
           title: "CSI DEVELOPMENT",
           club: "CSI-Development",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.39 AM.jpeg",
+          imgSrc: "/ultimate/bitwise.jpg",
           logoSrc: "bitwise.png",
           title: "CSI BITWISE",
           club: "CSI-Bitwise",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.40 AM.jpeg",
+          imgSrc: "/ultimate/botnet.jpg",
           logoSrc: "botnet.png",
           title: "CSI BOTNET",
           club: "CSI-Botnet",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.51 AM.jpeg",
+          imgSrc: "/ultimate/vrarmr_02.jpg",
           logoSrc: "arvrmr.png",
           title: "VR AR MR",
           club: "VR+AR+MR",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.53 AM.jpeg",
+          imgSrc: "/ultimate/mozilla_02.jpg",
           logoSrc: "MOZILLA.png",
           title: "MOZILLA",
           club: "Mozilla",
         },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.54 AM.jpeg",
+          imgSrc: "/ultimate/rospinot.jpg",
           logoSrc: "rospinot.png",
           title: "ROSPINOT",
           club: "Rospinot",
         },
-        { imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.55 AM.jpeg", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
+        // { imgSrc: "/ultimate/multimedia.png", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
         {
-          imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.56 AM.jpeg",
+          imgSrc: "/ultimate/multimedia.png",
           logoSrc: "MMUIUX-BLACK.png",
           title: "CSI MULTIMEDIA",
           club: "CSI-MM%26UI%2FUX",
         },
-        { imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.57 AM.jpeg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
+        { imgSrc: "/ultimate/gfg.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
+        {
+          imgSrc: "/ultimate/devlopment.jpg",
+          logoSrc: "dev.png",
+          title: "CSI DEVELOPMENT",
+          club: "CSI-Development",
+        },
+        {
+          imgSrc: "/ultimate/bitwise.jpg",
+          logoSrc: "bitwise.png",
+          title: "CSI BITWISE",
+          club: "CSI-Bitwise",
+        },
+        {
+          imgSrc: "/ultimate/botnet.jpg",
+          logoSrc: "botnet.png",
+          title: "CSI BOTNET",
+          club: "CSI-Botnet",
+        },
+        {
+          imgSrc: "/ultimate/vrarmr_02.jpg",
+          logoSrc: "arvrmr.png",
+          title: "VR AR MR",
+          club: "VR+AR+MR",
+        },
+        {
+          imgSrc: "/ultimate/mozilla_02.jpg",
+          logoSrc: "MOZILLA.png",
+          title: "MOZILLA",
+          club: "Mozilla",
+        },
+        {
+          imgSrc: "/ultimate/rospinot.jpg",
+          logoSrc: "rospinot.png",
+          title: "ROSPINOT",
+          club: "Rospinot",
+        },
+        {
+          imgSrc: "/ultimate/multimedia.png",
+          logoSrc: "MMUIUX-BLACK.png",
+          title: "CSI MULTIMEDIA",
+          club: "CSI-MM%26UI%2FUX",
+        },
+        { imgSrc: "/ultimate/gfg.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
       ],
     },
     {
       name: "CIVIL",
-      content: [{ imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.59 AM.jpeg", logoSrc: "/Civil.png", title: "CE" }],
+      content: [{ imgSrc: "/ultimate/civil_02.jpg", logoSrc: "/Civil.png", title: "CE" }],
     },
     {
       name: "CHEMICAL",
       content: [
-        { imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.00 AM.jpeg", logoSrc: "CHEMICAL LOGO.png", title: "CHE" },
+        { imgSrc: "/ultimate/che.jpg", logoSrc: "CHEMICAL LOGO.png", title: "CHE" },
       ],
     },
     {
       name: "MECHANICAL",
-      content: [{ imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.02 AM.jpeg", logoSrc: "mes.png", title: "MES" }],
+      content: [{ imgSrc: "/ultimate/mechanical.jpg", logoSrc: "mes.png", title: "MES" }],
     },
     {
       name: "ELECTRONICS",
-      content: [{ imgSrc: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.03 AM.jpeg", logoSrc: "Isf.png", title: "ISF" }],
+      content: [{ imgSrc: "/ultimate/eceisf_02.jpg", logoSrc: "Isf.png", title: "ISF" }],
     },
   ];
 
@@ -192,3 +235,8 @@ const FlipSlider = () => {
 };
 
 export default FlipSlider;
+
+
+
+
+

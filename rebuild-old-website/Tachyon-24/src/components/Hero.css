@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap');
+
 /* Base styles */
 :root {
   --primary-color: #0047AB;
@@ -528,17 +535,17 @@
   display: inline-block;
   padding: 0 50px;
   color: transparent;
-  font-family: 'Orbitron', 'Futura', sans-serif;
+  font-family: "Orbitron", sans-serif; 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #DC143C, #8B0000, #4B0082, #0047AB, #1E90FF);
+  background-image: linear-gradient(90deg, #A8A9AD, #C0C0C0, #808080, #696969, #A8A9AD);
   background-size: 200% auto;
   animation: shimmerText 3s linear infinite;
 }
 
 .scrolling-text-item:nth-child(2n) {
-  background-image: linear-gradient(90deg, #1E90FF, #0047AB, #DC143C);
+  background-image: linear-gradient(90deg, #C0C0C0, #A8A9AD, #808080, #696969);
   background-size: 200% auto;
   animation: shimmerText 3s linear infinite reverse;
 }
