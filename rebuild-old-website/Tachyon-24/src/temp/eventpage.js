@@ -33,6 +33,11 @@ const eventsData = {
       { id: 16, name: "TYPOLYMPICS", description: "Speed typing event in which various body parts are used for typing sentences", venue: "CL-3", time: "16th, 4:00 PM -  5:00 PM" },
       { id: 17, name: "COMICSTER", description: "Quick development challenge", venue: "Lab 2" },
     ],
+    "JDSC": [
+      { id: 18, name: "CSS Lottery", description: "Showcase your CSS skills in a fast-paced digital lottery", venue: "LT-1", image: "./eventgame1.jpeg", time: "16th, 2:00 PM - 3:00 PM" },
+      { id: 19, name: "Steganofy", description: "Hide and uncover secret messages using steganography techniques", venue: "LT-3", image: "./eventgame2.jpeg", time: "15th, 8:00 PM - 9:00 PM" },
+      { id: 20, name: "Image Imagine", description: "Generate and transform images based on unique prompts", venue: "LT-1", time: "17th, 12:00 PM" }
+    ],
     "VR AR MR": [
       { id: 21, name: "Cow Boy Shooter", description: "VR shooting game", venue: "VR Lab", image: "./eventgame3.jpeg" },
       { id: 22, name: "AR Treasure Hunt", description: "AR-based treasure hunt", venue: "Campus Wide", image: "./eventgame4.jpeg" },
@@ -89,12 +94,12 @@ const eventsData = {
 };
 
 const branchImages = {
-  'CSE': '/event_main_logo/test/six.png',
-  'ISF': '/event_main_logo/test/ala.png',
-  'MES': '/event_main_logo/test/three.png',
-  'CE': '/event_main_logo/test/four.png',
-  'CHE': '/event_main_logo/test/ele.png',
-  'IIC': '/event_main_logo/test/five.png'
+  'CSE': '/event_main_logo/one.jpg',
+  'ISF': '/transformersImages/WhatsApp Image 2025-10-21 at 7.16.14 AM.jpeg',
+  'MES': '/transformersImages/WhatsApp Image 2025-10-21 at 7.16.16 AM.jpeg',
+  'CE': '/transformersImages/WhatsApp Image 2025-10-21 at 12.03.42 PM (1).jpeg',
+  'CHE': '/transformersImages/WhatsApp Image 2025-10-21 at 12.03.42 PM (2).jpeg',
+  'IIC': '/transformersImages/WhatsApp Image 2025-10-21 at 12.03.43 PM.jpeg'
 };
 
 const clubIcons = {
@@ -103,20 +108,22 @@ const clubIcons = {
   'CSI-Development': '🛠️',
   'CSI-Botnet': '🕸️',
   'CSI-MM&UI/UX': '🎨',
+  'JDSC': '🔍',
   'VR AR MR': '👓',
   'GFG': '📚',
   'Mozilla': '🦊'
 };
 
 const clubImages = {
-  'Rospinot': '/ultimate/rospinot.jpg',
-  'CSI-Bitwise': '/ultimate/bitwise.jpg',
-  'CSI-Development': '/ultimate/devlopment.jpg',
-  'CSI-Botnet': '/ultimate/botnet.jpg',
-  'CSI-MM&UI/UX': '/ultimate/multimedia.png',
-  'VR AR MR': '/ultimate/vrarmr_02.jpg',
-  'GFG': '/ultimate/gfg.jpg',
-  'Mozilla': '/ultimate/mozilla_02.jpg'
+  'Rospinot': '/transformersImages/WhatsApp Image 2025-10-21 at 7.15.54 AM.jpeg',
+  'CSI-Bitwise': '/transformersImages/WhatsApp Image 2025-10-21 at 7.16.11 AM.jpeg',
+  'CSI-Development': '/transformersImages/WhatsApp Image 2025-10-21 at 7.16.02 AM.jpeg',
+  'CSI-Botnet': '/transformersImages/WhatsApp Image 2025-10-21 at 7.16.03 AM.jpeg',
+  'CSI-MM&UI/UX': '/transformersImages/WhatsApp Image 2025-10-21 at 7.15.59 AM.jpeg',
+  'JDSC': '/transformersImages/WhatsApp Image 2025-10-21 at 7.16.00 AM.jpeg',
+  'VR AR MR': '/transformersImages/WhatsApp Image 2025-10-21 at 7.16.06 AM.jpeg',
+  'GFG': '/transformersImages/WhatsApp Image 2025-10-21 at 7.15.57 AM.jpeg',
+  'Mozilla': '/transformersImages/WhatsApp Image 2025-10-21 at 7.15.56 AM.jpeg'
 };
 
 const branchIcons = {

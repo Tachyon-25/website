@@ -10,155 +10,155 @@ const FlipSlider = () => {
       name: "CSE",
       content: [
         {
-          imgSrc: "/transformersImages/devlopment.png",
+          imgSrc: "/ultimate/devlopment.jpg",
           logoSrc: "dev.png",
           title: "CSI DEVELOPMENT",
           club: "CSI-Development",
         },
         {
-          imgSrc: "/transformersImages/BITWISE.png",
+          imgSrc: "/ultimate/bitwise.jpg",
           logoSrc: "bitwise.png",
           title: "CSI BITWISE",
           club: "CSI-Bitwise",
         },
         {
-          imgSrc: "/transformersImages/BOTNET.png",
+          imgSrc: "/ultimate/botnet.jpg",
           logoSrc: "botnet.png",
           title: "CSI BOTNET",
           club: "CSI-Botnet",
         },
         {
-          imgSrc: "/transformersImages/vrarmr.png",
+          imgSrc: "/ultimate/vrarmr_02.jpg",
           logoSrc: "arvrmr.png",
           title: "VR AR MR",
           club: "VR+AR+MR",
         },
         {
-          imgSrc: "/transformersImages/moz.png",
+          imgSrc: "/ultimate/mozilla_02.jpg",
           logoSrc: "MOZILLA.png",
           title: "MOZILLA",
           club: "Mozilla",
         },
         {
-          imgSrc: "/transformersImages/rospinot.png",
+          imgSrc: "/ultimate/rospinot.jpg",
           logoSrc: "rospinot.png",
           title: "ROSPINOT",
           club: "Rospinot",
         },
-        // { imgSrc: "/transformersImages/multimedia.png", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
+        // { imgSrc: "/ultimate/multimedia.png", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
         {
-          imgSrc: "/transformersImages/multimedia.png",
+          imgSrc: "/ultimate/multimedia.png",
           logoSrc: "MMUIUX-BLACK.png",
           title: "CSI MULTIMEDIA",
           club: "CSI-MM%26UI%2FUX",
         },
-        { imgSrc: "/transformersImages/GFG.png", logoSrc: "gg.png", title: "GFG", club: "GFG" },
+        { imgSrc: "/ultimate/gfg.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
         {
-          imgSrc: "/transformersImages/devlopment.png",
+          imgSrc: "/ultimate/devlopment.jpg",
           logoSrc: "dev.png",
           title: "CSI DEVELOPMENT",
           club: "CSI-Development",
         },
         {
-          imgSrc: "/transformersImages/BITWISE.png",
+          imgSrc: "/ultimate/bitwise.jpg",
           logoSrc: "bitwise.png",
           title: "CSI BITWISE",
           club: "CSI-Bitwise",
         },
         {
-          imgSrc: "/transformersImages/BOTNET.png",
+          imgSrc: "/ultimate/botnet.jpg",
           logoSrc: "botnet.png",
           title: "CSI BOTNET",
           club: "CSI-Botnet",
         },
         {
-          imgSrc: "/transformersImages/vrarmr.png",
+          imgSrc: "/ultimate/vrarmr_02.jpg",
           logoSrc: "arvrmr.png",
           title: "VR AR MR",
           club: "VR+AR+MR",
         },
         {
-          imgSrc: "/transformersImages/moz.png",
+          imgSrc: "/ultimate/mozilla_02.jpg",
           logoSrc: "MOZILLA.png",
           title: "MOZILLA",
           club: "Mozilla",
         },
         {
-          imgSrc: "/transformersImages/rospinot.png",
+          imgSrc: "/ultimate/rospinot.jpg",
           logoSrc: "rospinot.png",
           title: "ROSPINOT",
           club: "Rospinot",
         },
-        // { imgSrc: "/transformersImages/multimedia.png", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
+        // { imgSrc: "/ultimate/multimedia.png", logoSrc: "jdsc.png", title: "JDSC", club: "JDSC" },
         {
-          imgSrc: "/transformersImages/multimedia.png",
+          imgSrc: "/ultimate/multimedia.png",
           logoSrc: "MMUIUX-BLACK.png",
           title: "CSI MULTIMEDIA",
           club: "CSI-MM%26UI%2FUX",
         },
-        { imgSrc: "/transformersImages/GFG.png", logoSrc: "gg.png", title: "GFG", club: "GFG" },
+        { imgSrc: "/ultimate/gfg.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
         {
-          imgSrc: "/transformersImages/devlopment.png",
+          imgSrc: "/ultimate/devlopment.jpg",
           logoSrc: "dev.png",
           title: "CSI DEVELOPMENT",
           club: "CSI-Development",
         },
         {
-          imgSrc: "/transformersImages/BITWISE.png",
+          imgSrc: "/ultimate/bitwise.jpg",
           logoSrc: "bitwise.png",
           title: "CSI BITWISE",
           club: "CSI-Bitwise",
         },
         {
-          imgSrc: "/transformersImages/BOTNET.png",
+          imgSrc: "/ultimate/botnet.jpg",
           logoSrc: "botnet.png",
           title: "CSI BOTNET",
           club: "CSI-Botnet",
         },
         {
-          imgSrc: "/transformersImages/vrarmr.png",
+          imgSrc: "/ultimate/vrarmr_02.jpg",
           logoSrc: "arvrmr.png",
           title: "VR AR MR",
           club: "VR+AR+MR",
         },
         {
-          imgSrc: "/transformersImages/moz.png",
+          imgSrc: "/ultimate/mozilla_02.jpg",
           logoSrc: "MOZILLA.png",
           title: "MOZILLA",
           club: "Mozilla",
         },
         {
-          imgSrc: "/transformersImages/rospinot.png",
+          imgSrc: "/ultimate/rospinot.jpg",
           logoSrc: "rospinot.png",
           title: "ROSPINOT",
           club: "Rospinot",
         },
         {
-          imgSrc: "/transformersImages/multimedia.png",
+          imgSrc: "/ultimate/multimedia.png",
           logoSrc: "MMUIUX-BLACK.png",
           title: "CSI MULTIMEDIA",
           club: "CSI-MM%26UI%2FUX",
         },
-        { imgSrc: "/transformersImages/GFG.png", logoSrc: "gg.png", title: "GFG", club: "GFG" },
+        { imgSrc: "/ultimate/gfg.jpg", logoSrc: "gg.png", title: "GFG", club: "GFG" },
       ],
     },
     {
       name: "CIVIL",
-      content: [{ imgSrc: "/transformersImages/civilo.png", logoSrc: "/Civil.png", title: "CE" }],
+      content: [{ imgSrc: "/ultimate/civil_02.jpg", logoSrc: "/Civil.png", title: "CE" }],
     },
     {
       name: "CHEMICAL",
       content: [
-        { imgSrc: "/transformersImages/che.png", logoSrc: "CHEMICAL LOGO.png", title: "CHE" },
+        { imgSrc: "/ultimate/che.jpg", logoSrc: "CHEMICAL LOGO.png", title: "CHE" },
       ],
     },
     {
       name: "MECHANICAL",
-      content: [{ imgSrc: "/transformersImages/mec.png", logoSrc: "mes.png", title: "MES" }],
+      content: [{ imgSrc: "/ultimate/mechanical.jpg", logoSrc: "mes.png", title: "MES" }],
     },
     {
       name: "ELECTRONICS",
-      content: [{ imgSrc: "/transformersImages/isf.png", logoSrc: "Isf.png", title: "ISF" }],
+      content: [{ imgSrc: "/ultimate/eceisf_02.jpg", logoSrc: "Isf.png", title: "ISF" }],
     },
   ];
 
@@ -235,3 +235,8 @@ const FlipSlider = () => {
 };
 
 export default FlipSlider;
+
+
+
+
+
