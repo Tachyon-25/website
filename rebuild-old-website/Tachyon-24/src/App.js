@@ -66,7 +66,6 @@ function App() {
           {/* Individual page routes */}
           <Route path="/card-1" element={<Card1 />} />
           <Route path="/sponsors" element={<Sponsorspage />} />
-
           <Route path="/events" element={<EventsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
