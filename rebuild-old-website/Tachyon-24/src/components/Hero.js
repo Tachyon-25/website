@@ -129,7 +129,7 @@ const Hero = () => {
         </div>
         <div className="horizontal-line"></div>
         <div className="icon-show">
-          <img src="/transformersImages/optimusprime-removebg-preview.png" alt="Transformers Icon" className="icon-center" />
+          {/* <img src="/transformersImages/optimusprime-removebg-preview.png" alt="Transformers Icon" className="icon-center" /> */}
         </div>
         <div className="particle-container">
           {particles.map((particle) => (
