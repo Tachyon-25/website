@@ -7,46 +7,40 @@ import Footer from "../components/Footer";
 const eventsData = { 
   "CSE": {
     "Rospinot": [
-      { id: 1, name: "Robo Bazzinga", description: "Rospinot fun maze solving challenge for robots", venue: "AB Corridor", image: "/transformersImages/WhatsApp Image 2025-10-21 at 7.15.54 AM.jpeg", time: "17th, 10:00 AM" },
-      { id: 2, name: "Cicada 036", description: "A mysterious online puzzle, with complex cryptography and intelligence clues", venue: "LT-2", image: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.07 AM.jpeg", time: "16th, 2:00 PM - 6:00 PM"},
-      { id: 3, name: "Robo Soccer", description: "Robots compete to score goals on the field", venue: "AB Corridor", image: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.16 AM.jpeg", time: "16th, 6:00 PM - 8:00 PM" },
-      { id: 4, name: "The Escape Room", description: "Robots race to solve clues and escape", venue: "AB Corridor", image: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.14 AM.jpeg", time: "17th, 10:00 AM" },
+      { id: 1, name: "Robo Bazzinga", description: "Rospinot fun maze solving challenge for robots", venue: "AB Corridor", time: "17th, 10:00 AM" },
+      { id: 2, name: "Cicada 036", description: "A mysterious online puzzle, with complex cryptography and intelligence clues", venue: "LT-2", time: "16th, 2:00 PM - 6:00 PM"},
+      { id: 3, name: "Robo Soccer", description: "Robots compete to score goals on the field", venue: "AB Corridor", time: "16th, 6:00 PM - 8:00 PM" },
+      { id: 4, name: "The Escape Room", description: "Robots race to solve clues and escape", venue: "AB Corridor", time: "17th, 10:00 AM" },
     ],
     "CSI-Bitwise": [
-      { id: 5, name: "Blind Code", description: "Test your coordination in a challenging blindfolded coding relay", venue: "CL-3 & CL-5", image: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.13 AM.jpeg", time: "16th, 2:00 PM - 4:00 PM" },
-      { id: 6, name: "Code Mania", description: "Multiple round coding event", venue: "Online", image: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.11 AM.jpeg", time: "15th, 7:00 PM - 10:00 PM" },
-      { id: 7, name: "Newbie Code", description: "Kodeathon for freshman year", venue: "CL (ALL)", image: "/transformersImages/WhatsApp Image 2025-10-21 at 7.16.10 AM.jpeg", time: "17th, 10:00 AM - 12:00 PM" },
+      { id: 5, name: "Newbie Code", description: "Kodeathon for freshman year", venue: "CL-2, CL-3, CL-4, CL-5" },
+      { id: 6, name: "Blind Code", description: "Test your coordination in a challenging blindfolded coding relay", venue: "CL-3, CL-4" },
+      { id: 7, name: "Code Mania", description: "Multiple round coding event", venue: "Online" },
+      { id: 8, name: "Bug Hunt", description: "Find and fix bugs in the code", venue: "CL-3, CL-4" },
+      { id: 9, name: "Debug Meme", description: "Debugging with a twist of humor", venue: "Online" },
     ],
     "CSI-Development": [
-      { id: 8, name: "Hack Sprint", description: "Code against the clock to solve real-world problems (Hackathon)", venue: "MPH", image: "./eventgame5.jpeg", time: "16th, 9:00 PM - 12:00 AM" },
-      { id: 9, name: "Code Relay", description: "Collaborate seamlessly to tackle coding challenges in relay style", venue: "LT-1", image: "./eventgame1.jpeg", time: "17th, 4:00 PM - 6:00 PM" },
-      { id: 10, name: "Smash Kart.io", description: "Gaming event", venue: "LT-2", time: "15th, 7:00 PM - 8:00 PM" },
+      { id: 10, name: "Snake And CSS", description: "Creative CSS challenge", venue: "LT-2" },
+      { id: 11, name: "HackSprint", description: "Code against the clock to solve real-world problems (Hackathon)", venue: "Tagore Hall" },
+      { id: 12, name: "Smash Cart", description: "Gaming event", venue: "LT-2" },
+      { id: 13, name: "Build It Wrong", description: "Anti-coding challenge", venue: "CL-4" },
+      { id: 14, name: "Vibe Coding Hackathon", description: "2–3 hour hackathon where participants solve problem statements using vibe coding tools. Focus on creativity, style, and fun with animations, themes, and playful designs", venue: "CL-4" },
     ],
     "CSI-Botnet": [
-      { id: 11, name: "Cryptic Hunt", description: "Decode and debug your way through a cryptic, beginner-friendly hunt", venue: "CL-4", image: "./eventgame2.jpeg", time: "17th, 3:00 PM - 4:00 PM" },
-      { id: 12, name: "Chakravyuh - CTF", description: "Puzzle event based on cyber security", venue: "Online", image: "./eventgame3.jpeg", time: "15th, 9:00 PM - 11:00 PM" },
-      { id: 13, name: "Phishers", description: "Breaking the code", venue: "Lab 2" },
+      { id: 15, name: "Cryptic Hunt", description: "Decode and debug your way through a cryptic, beginner-friendly hunt", venue: "CL-4" },
+      { id: 16, name: "MineTech Arena", description: "Minecraft technical challenge", venue: "Open ground near Nehru Plaza" },
+      { id: 17, name: "LAN Party", description: "Multiplayer gaming event", venue: "CL-2" },
     ],
     "CSI-MM&UI/UX": [
-      { id: 14, name: "GLITCH", description: "E-sports zone", venue: "LT-5", image: "./eventgame5.jpeg", time: "17th, 12:00 PM" },
-      { id: 15, name: "ARCADE BOX", description: "A fun retro game base console system for reliving the old games era", venue: "Nehru Plaza", image: "./eventgame4.jpeg", time: "16th, 1:00 PM - 4:00 PM" },
-      { id: 16, name: "TYPOLYMPICS", description: "Speed typing event in which various body parts are used for typing sentences", venue: "CL-3", time: "16th, 4:00 PM -  5:00 PM" },
-      { id: 17, name: "COMICSTER", description: "Quick development challenge", venue: "Lab 2" },
-    ],
-    "VR AR MR": [
-      { id: 21, name: "Cow Boy Shooter", description: "VR shooting game", venue: "VR Lab", image: "./eventgame3.jpeg" },
-      { id: 22, name: "AR Treasure Hunt", description: "AR-based treasure hunt", venue: "Campus Wide", image: "./eventgame4.jpeg" },
-      { id: 23, name: "2D-Game", description: "VR pong game", venue: "VR Lab" },
-    ],
-    "GFG": [
-      { id: 24, name: "Query Quest", description: "SQL query challenge", venue: "LT-6", image: "./eventgame1.jpeg", time: "17th, 3:30 PM - 5:00 PM" },
-      { id: 25, name: "Brain Teaser", description: "Aptitude test and quiz", venue: "LT-1", image: "./eventgame2.jpeg", time: "16th, 6:00 PM - 7:30 PM" },
-      { id: 26, name: "Spot The Brand", description: "Quiz competition", venue: "Lab 3" },
+      { id: 18, name: "Memeathon", description: "Creative meme making competition", venue: "Online" },
+      { id: 19, name: "Arcade Box", description: "A fun retro game base console system for reliving the old games era", venue: "Nehru Plaza" },
+      { id: 20, name: "Typoolymics", description: "Speed typing event", venue: "CL-3" },
+      { id: 21, name: "GLITCH", description: "E-sports zone", venue: "Nehru Plaza" },
     ],
     "Mozilla": [
-      { id: 27, name: "War For Trezor", description: "Web security challenge", venue: "Online", image: "./eventgame3.jpeg", time: "16th, 9:00 PM - 11:00 PM" },
-      { id: 28, name: "Website Pixel Art", description: "Fun event where students have to find correct answers for problems", venue: "Online", image: "./eventgame4.jpeg", time: "15th, 9:00 PM - 11:00 PM" },
-      { id: 29, name: "Hack in a Box", description: "Online coding challenge for beginners with a virtual 'mystery box' of prompts, APIs, and fun twists", venue: "Online", image: "./eventgame5.jpeg", time: "17th, 9:00 PM - 11:00 PM" }
+      { id: 22, name: "Website Pixel Art", description: "Fun event where students have to find correct answers for problems", venue: "Online" },
+      { id: 23, name: "War For Trezor", description: "Web security challenge", venue: "Online" },
+      { id: 24, name: "Hack in a Box", description: "Online coding challenge for beginners with a virtual 'mystery box' of prompts, APIs, and fun twists", venue: "Online" }
     ]
   },
   "ISF": [
@@ -119,13 +113,13 @@ const clubImages = {
   'Mozilla': '/ultimate/mozilla_02.jpg'
 };
 
-const branchIcons = {
-  'CSE': '💻',
-  'ISF': '⚡',
-  'MES': '⚙️',
-  'CE': '🏗️',
-  'CHE': '🧪',
-  'IIC': '🚀'
+ const branchIcons = {
+   'CSE': '💻',
+   'ISF': '⚡',
+   'MES': '⚙️',
+   'CE': '🏗️',
+   'CHE': '🧪',
+   'IIC': '🚀'
 };
 
 const extendedDescriptions = { 
@@ -214,33 +208,36 @@ const Events = () => {
   };
 
   const renderBranches = () => (
-    <div className="branches-container">
-      {Object.keys(eventsData).map((branch) => (
-        <div
-          key={branch}
-          className="branch-card"
-          onClick={() => handleBranchClick(branch)}
-        >
-          <div className="branch-image-container">
-            <img 
-              src={branchImages[branch]} 
-              alt={branch} 
-              className="branch-image"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'block';
-              }}
-            />
-            <div className="branch-icon" style={{ display: 'none' }}>
-              {branchIcons[branch]}
+    <>
+      <h1 className="events-page-title">BRANCHES</h1>
+      <div className="branches-container">
+        {Object.keys(eventsData).map((branch) => (
+          <div
+            key={branch}
+            className="branch-card"
+            onClick={() => handleBranchClick(branch)}
+          >
+            <div className="branch-image-container">
+              <img 
+                src={branchImages[branch]} 
+                alt={branch} 
+                className="branch-image"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'block';
+                }}
+              />
+              <div className="branch-icon" style={{ display: 'none' }}>
+                {branchIcons[branch]}
+              </div>
             </div>
+            <h2>{branch}</h2>
+            <p>{Array.isArray(eventsData[branch]) ? `${eventsData[branch].length} Events` : `${Object.keys(eventsData[branch]).length} Clubs`}</p>
           </div>
-          <h2>{branch}</h2>
-          <p>{Array.isArray(eventsData[branch]) ? `${eventsData[branch].length} Events` : `${Object.keys(eventsData[branch]).length} Clubs`}</p>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 
   const renderEventCard = (event) => (
@@ -262,9 +259,9 @@ const Events = () => {
     </div>
   );
 
-  const renderEventsBox = (events) => (
+  const renderEventsBox = (events, clubName) => (
     <div className="events-box">
-      <h3 className="other-events" style={{marginBottom:'-0.5%'}}>Other Events</h3>
+      <h3 className="other-events" style={{marginBottom:'2rem'}}>{clubName} Events</h3>
       <hr style={{width:'100%'}}></hr>
       <div className="event-boxes-container">
         {events.length === 0 ? (
@@ -275,10 +272,9 @@ const Events = () => {
               <div className="event-box-header">
                 <h4>{event.name}</h4>
               </div>
-              <p style={{marginTop:'-10%'}}><strong>Description:</strong> {event.description || 'No description available.'}</p>
-              <p><strong><MapPin/></strong> {event.venue || 'Venue details unavailable.'}</p>
-              <span className="event-time" ><Clock4/><span style={{marginLeft:'10px'}}>{event.time || 'TBA'}</span></span>
-          
+              <p><strong>Description:</strong> {event.description || 'No description available.'}</p>
+              <p><strong><MapPin size={18} /></strong> {event.venue || 'Venue details unavailable.'}</p>
+              <span className="event-time"><Clock4 size={18} /><span style={{marginLeft:'10px'}}>{event.time || 'TBA'}</span></span>
             </div>
           ))
         )}
@@ -288,22 +284,12 @@ const Events = () => {
   
 
   const renderEvents = (events) => {
-    const mainEvents = events.slice(0, 2);
-    const remainingEvents = events.slice(2);
+    // Get the display name for the events
+    const displayName = selectedClub || selectedBranch;
 
     return (
       <div className="events-container">
-        <h2>
-          {selectedEvent
-            ? `Event: ${selectedEvent.name}`
-            : selectedClub
-            ? `Club: ${selectedClub}`
-            : `${selectedBranch} Events`}
-        </h2>
-        <div className="events-grid">
-          {mainEvents.map(renderEventCard)}
-        </div>
-        {remainingEvents.length > 0 && renderEventsBox(remainingEvents)}
+        {events.length > 0 && renderEventsBox(events, displayName)}
       </div>
     );
   };
@@ -315,14 +301,16 @@ const Events = () => {
 
     if (!selectedClub) {
       return (
-        <div className="clubs-container">
-          {Object.keys(branchData).map((club) => (
-            <div
-              key={club}
-              className="club-card"
-              onClick={() => handleClubClick(club)}
-              data-club={club}
-            >
+        <>
+          <h1 className="clubs-page-title">{selectedBranch} CLUBS</h1>
+          <div className="clubs-container">
+            {Object.keys(branchData).map((club) => (
+              <div
+                key={club}
+                className="club-card"
+                onClick={() => handleClubClick(club)}
+                data-club={club}
+              >
               <div className="club-image-container">
                 <img 
                   src={clubImages[club]} 
@@ -343,6 +331,7 @@ const Events = () => {
             </div>
           ))}
         </div>
+        </>
       );
     }
 
