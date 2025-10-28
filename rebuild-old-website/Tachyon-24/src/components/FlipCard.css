@@ -56,18 +56,23 @@
   font-family: "Silkscreen", sans-serif;
   font-weight: 700;
   font-style: normal;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 10px;
 }
 
 .item_tabs_characters_home {
   position: relative;
   padding: 10px 20px;
   cursor: pointer;
-  margin-left: 2vh;
+  margin-left: 0;
   font-size: 30px;
   background-color: black;
   color: white;
   border: none;
   transition: color 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
 }
 
 .item_tabs_characters_home.active,
@@ -80,15 +85,16 @@
   position: absolute;
   bottom: -5px;
   left: 0;
-  width: 0; /* Initial width of the underline */
+  width: 0;
   height: 3px;
   background-color: #1E90FF;
   transition: width 0.3s ease;
+  z-index: 11;
 }
 
 .item_tabs_characters_home:hover::after,
 .item_tabs_characters_home.active::after {
-  width: 100%; /* Expands to match text width on hover */
+  width: 100%;
 }
 
 /* Tab Content Styling */
@@ -168,13 +174,18 @@
   margin-right: 8vh;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
 }
 
 .image_character_tabs {
-  height: 120vh;
-  width: 75vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 30px;
 }
 
 /* Card Image Container and Hover Effect */
@@ -182,12 +193,16 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
   z-index: 1;
   margin: 0;
   padding: 0;
+  border: none;
+  border-radius: 30px;
 }
 .card-image {
   width: 100%;
@@ -195,7 +210,10 @@
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.7;
+  opacity: 1;
+  display: block;
+  border: none;
+  border-radius: 30px;
 }
 .card:hover .card-image {
   transform: scale(1.1);
@@ -206,6 +224,7 @@
 .card-image {
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 .card:hover {
@@ -246,6 +265,35 @@
 }
 
 /* Gradient Backgrounds for Individual Cards - Transformers Theme */
+/* Hide all character name labels */
+.card::before,
+.card1::before,
+.card2::before,
+.card3::before,
+.card4::before,
+.card5::before,
+.card6::before,
+.card7::before,
+.card8::before,
+.card9::before,
+.card10::before,
+.card11::before,
+.card12::before,
+.card13::before,
+.card14::before,
+.card15::before,
+.card16::before,
+.card17::before,
+.card18::before,
+.card19::before,
+.card20::before,
+.card21::before,
+.card22::before,
+.card23::before,
+.card24::before {
+  display: none !important;
+}
+
 /* CSI Development - Optimus Prime (Red/Blue heroic leader) */
 .card1 {
   background: linear-gradient(to bottom, #4A90E2 20%, #DC143C 50%, #0047AB 70%);
@@ -268,6 +316,7 @@
   transform: rotate(90deg);
   transform-origin: right top;
   pointer-events: none;
+  display: none;
 }
 /* CSI Bitwise - Megatron (Dark purple/silver menacing) */
 .card2 {
@@ -561,12 +610,22 @@
 }
 
 .wrap_image_character_tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 94%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  z-index: 1;
 }
 
 /* Card Logo */
@@ -588,163 +647,324 @@
 }
 
 /* Responsive Adjustments */
-/* Media Query for max-width 768px */
-@media (max-width: 768px) {
-  .card {
-    width: 41vh;
-    height: 64vh;
-    border-radius: 3vh;
-    margin-left: 9vh;
+/* Mobile Only Media Queries - Desktop remains untouched */
+
+/* Small Mobile Devices */
+@media only screen and (max-width: 480px) {
+  .characters_section {
+    padding: 15px 10px;
+    overflow-x: hidden;
   }
 
   .container {
-    width: 95%;
+    padding: 0 10px;
+    margin-bottom: 4vh;
+  }
+
+  .wrap_tabs_characters_home {
+    height: auto;
+    min-height: 60vh;
+    margin-bottom: 20vh;
+  }
+
+  .tabs_menu_characters_home {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+    justify-content: center;
+    padding: 0 5px;
+    max-width: 100%;
+  }
+
+  .item_tabs_characters_home {
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-left: 0;
+    flex: 0 1 auto;
+  }
+
+  /* Force ELECTRONICS to next line */
+  .item_tabs_characters_home:nth-child(5) {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .item_tabs_characters_home::after {
+    height: 2px;
+  }
+
+  .tabs_content_characters_home {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tab-pane.active {
+    height: auto;
+    min-height: 60vh;
+    overflow: hidden;
+  }
+
+  .card-container {
+    padding: 0 5px;
+  }
+
+  /* Keep the marquee animation working on mobile */
+  .card-container.cse-marquee {
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: visible;
+    width: auto;
+    justify-content: flex-start;
+    animation: scroll-horizontal 25s linear infinite;
+    animation-play-state: running !important;
+  }
+
+  /* Disable hover pause on mobile */
+  .card-container.cse-marquee:hover {
+    animation-play-state: running !important;
+  }
+
+  .card {
+    width: 280px;
+    height: 420px;
+    border-radius: 18px;
+    margin-right: 20px;
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  .card-title {
+    font-size: 1em;
+    left: 18px;
+  }
+
+  .card-title::before {
+    width: 2px;
+    left: -8px;
+  }
+
+  .card1::before,
+  .card2::before,
+  .card3::before,
+  .card4::before,
+  .card5::before,
+  .card6::before,
+  .card7::before,
+  .card8::before {
+    font-size: 10px;
+    top: 20px;
+    right: 12px;
+  }
+
+  .image_character_tabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  .wrap_image_character_tabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .logo-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Medium Mobile Devices */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .characters_section {
+    padding: 18px 12px;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .wrap_tabs_characters_home {
+    height: auto;
+    min-height: 65vh;
+    margin-bottom: 25vh;
+  }
+
+  .tabs_menu_characters_home {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .item_tabs_characters_home {
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-left: 0;
+  }
+
+  .tabs_content_characters_home {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tab-pane.active {
+    height: auto;
+    min-height: 65vh;
+    overflow: hidden;
+  }
+
+  /* Keep the marquee animation working on mobile */
+  .card-container.cse-marquee {
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: visible;
+    width: auto;
+    justify-content: flex-start;
+    animation: scroll-horizontal 25s linear infinite;
+    animation-play-state: running !important;
+  }
+
+  /* Disable hover pause on mobile */
+  .card-container.cse-marquee:hover {
+    animation-play-state: running !important;
+  }
+
+  .card {
+    width: 320px;
+    height: 480px;
+    border-radius: 20px;
+    margin-right: 25px;
+    margin-left: 0;
+    flex-shrink: 0;
   }
 
   .card:hover {
     transform: scale(1.03);
   }
 
+  .card-title {
+    font-size: 1.2em;
+    left: 20px;
+  }
+
+  .card1::before,
+  .card2::before,
+  .card3::before,
+  .card4::before,
+  .card5::before,
+  .card6::before,
+  .card7::before,
+  .card8::before {
+    font-size: 11px;
+    top: 22px;
+    right: 15px;
+  }
+
+  .image_character_tabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .wrap_image_character_tabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .logo-image {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Tablets Portrait - Only if needed */
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .characters_section {
+    padding: 20px 15px;
+  }
+
   .tabs_menu_characters_home {
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .item_tabs_characters_home {
     font-size: 24px;
-    padding: 8px 18px;
+    margin-left: 8px;
   }
 
-  .item_tabs_characters_home::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0; /* Initial width of the underline */
-    height: 3px;
-    background-color: #1E90FF;
-    transition: width 0.3s ease;
+  /* Keep the marquee animation working on tablets */
+  .card-container.cse-marquee {
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: visible;
+    width: auto;
+    justify-content: flex-start;
+    animation: scroll-horizontal 25s linear infinite;
+    animation-play-state: running !important;
   }
 
-  .item_tabs_characters_home:hover::after,
-  .item_tabs_characters_home.active::after {
-    width: fit-content; /* Adjust the width of the line to match the title text */
+  /* Disable hover pause on tablets portrait */
+  .card-container.cse-marquee:hover {
+    animation-play-state: running !important;
   }
 
-  .image_character_tabs{
-    height: 67vh;
-    width: 54vh;
-    object-fit: cover;
-  }
-
-  .wrap_image_character_tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 94%;
-  }
-}
-
-/* Media Query for max-width 420px */
-@media (max-width: 420px) {
   .card {
-    width: 345px;
-    height: 600px;
-    border-radius: 3vh;
-    margin-left: 8vh;
+    width: 350px;
+    height: 525px;
+    margin-right: 30px;
+    flex-shrink: 0;
+    border-radius: 25px;
   }
-
-  .item_tabs_characters_home {
-    font-size: 35px;
-    padding: 6px 15px;
-  }
-
-  .item_tabs_characters_home::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0; /* Initial width of the underline */
-    height: 3px;
-    background-color: #1E90FF;
-    transition: width 0.3s ease;
-  }
-
-  .item_tabs_characters_home:hover::after,
-  .item_tabs_characters_home.active::after {
-    width: fit-content; /* Adjust the width of the line to match the title text */
-  }
-  .image_character_tabs{
-    height: 86vh;
-    width: 48vh;
-    object-fit: cover;
-  }
-  .wrap_image_character_tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 94%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .card {
-    width: 37vh;
-    height: 64vh;
-    border-radius: 3vh;
-    margin-left: 7vh;
-  }
-
-  .container {
-    width: 95%;
-  }
-
-  .card:hover {
-    transform: scale(1.03);
-  }
-
-  .tabs_menu_characters_home {
-    flex-direction: column;
-    gap: 10px;
-    margin-right: 5vh;
-  }
-
-  .item_tabs_characters_home {
-    font-size: 44px;
-    padding: 8px 18px;
-  }
-
-  .item_tabs_characters_home::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0; /* Initial width of the underline */
-    height: 3px;
-    background-color: #1E90FF;
-    transition: width 0.3s ease;
-  }
-
-  .item_tabs_characters_home:hover::after,
-  .item_tabs_characters_home.active::after {
-    width: fit-content; /* Adjust the width of the line to match the title text */
-  }
-
 
   .image_character_tabs {
-    height: 65vh;
-    width: 48vh; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
 
   .wrap_image_character_tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    height: 95%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
   }
 }
