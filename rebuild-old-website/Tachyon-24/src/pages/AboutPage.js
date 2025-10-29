@@ -4,9 +4,11 @@ import "./AboutPage.css";
 import Footer from "../components/Footer";
 import groupImg from "../assests/last-techfest-group.jpeg";
 import ImageSlider from "./AboutPagecomponents/ImageSlider";
+import SmallSparksBackground from "../components/SmallSparksBackground";
 
 
 const AboutPage = () => {
+  const transformerBg = "../public/transformersImages/Gemini_Generated_Image_v2ey78v2ey78v2ey.png"; // Update exact path
   const slides = [
     { url: "/image1.jpeg", title: "last-techfest-1" },
     { url: "/image2.jpeg", title: "last-techfest-2" },
@@ -30,7 +32,8 @@ const AboutPage = () => {
 
   return (
     <>
-      <section className="aboutpage">
+      <SmallSparksBackground />
+      <section className="aboutpage" style={{'--transformer-bg': `url(${transformerBg})`}}>
         <div className="content-about"> 
         <div className="details-box-1">
           

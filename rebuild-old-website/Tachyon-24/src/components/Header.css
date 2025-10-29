@@ -103,6 +103,10 @@
   cursor: pointer;
   z-index: 1001;
   margin-right: 10vh;
+  position: absolute;
+  right: 0rem;
+  top: 4rem;
+  transition: transform 0.3s ease;
 }
 
 .bar {
@@ -110,6 +114,10 @@
   height: 3px;
   background-color: white;
   transition: all 0.3s ease;
+}
+
+.hamburger-icon.open {
+  transform: translateY(-1.5rem);
 }
 
 .hamburger-icon.open .bar:nth-child(1) {

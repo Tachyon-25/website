@@ -2,8 +2,8 @@
 :root {
     --contact-primary-color: #5130ff;
     --contact-secondary-color: #4a90e2;
-    --contact-bg-dark: #111827;
-    --contact-bg-darker: #1f2937;
+    --contact-bg-dark: #0D0D0D;
+    --contact-bg-darker: #0D0D0D;
     --contact-bg-darkest: #000000;
     --contact-text-light: #ffffff;
     --contact-text-gray: #9ca3af;
@@ -14,6 +14,8 @@
     min-height: 100vh;
     background-color: var(--contact-bg-dark);
     color: var(--contact-text-light);
+    position: relative;
+    z-index: 1;
   }
   
   .contact-container {
@@ -96,10 +98,11 @@
   }
   
   .contact-form-container {
-    background-color: var(--contact-bg-darker);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
   }
   
   .contact-form-container h2 {
@@ -172,7 +175,7 @@
   
   /* Info Cards */
   .contact-info-section {
-    background-color: var(--contact-bg-darker);
+    background-color: transparent;
     padding: 4rem 0;
   }
   
@@ -183,12 +186,13 @@
   }
   
   .contact-info-card {
-    background-color: var(--contact-bg-dark);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center;
     transition: transform 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
   }
   
   .contact-info-card:hover {
