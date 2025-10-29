@@ -87,6 +87,7 @@
   width: 300px;
   height: 200px;
   transition: transform 0.5s ease;
+  object-fit: contain;
 }
 
 
@@ -160,6 +161,159 @@
   height: 100px;
 }
 
+/* Responsive media queries for mobile devices */
+@media (max-width: 480px) {
+  .scroller>.scroller__inner>li>img {
+    padding: 6px;
+    width: 120px;
+    height: 80px;
+  }
+
+  #axisbanklogo,
+  #gunaagrologo,
+  #protienlogo {
+    width: 136px;
+    height: 40px;
+  }
+
+  #someonelogo {
+    width: 128px;
+    height: 32px;
+  }
+
+  #fasttrack {
+    width: 128px;
+    height: 112px;
+  }
+
+  #unstop {
+    width: 136px;
+    height: 52px;
+  }
+
+  #shekunjlogo {
+    width: 100px;
+    height: 140px;
+  }
+
+  #Trip247logo {
+    width: 100px;
+    height: 80px;
+  }
+
+  #kitchen,
+  #vadapavlogo {
+    width: 80px;
+    height: 80px;
+  }
+
+  #PCE {
+    width: 140px;
+    height: 120px;
+  }
+
+  #megamind {
+    width: 120px;
+    height: 72px;
+  }
+
+  #tealogylogo {
+    width: 120px;
+    height: 80px;
+  }
+
+  #hdfc {
+    width: 120px;
+    height: 60px;
+  }
+
+  #santushtilogo {
+    width: 80px;
+    height: 80px;
+  }
+
+  #sbilogo {
+    width: 80px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .scroller>.scroller__inner>li>img {
+    padding: 8px;
+    width: 180px;
+    height: 120px;
+  }
+
+  #axisbanklogo,
+  #gunaagrologo,
+  #protienlogo {
+    width: 204px;
+    height: 60px;
+  }
+
+  #someonelogo {
+    width: 192px;
+    height: 48px;
+  }
+
+  #fasttrack {
+    width: 192px;
+    height: 168px;
+  }
+
+  #unstop {
+    width: 204px;
+    height: 78px;
+  }
+
+  #shekunjlogo {
+    width: 150px;
+    height: 210px;
+  }
+
+  #Trip247logo {
+    width: 150px;
+    height: 120px;
+  }
+
+  #kitchen,
+  #vadapavlogo {
+    width: 120px;
+    height: 120px;
+  }
+
+  #PCE {
+    width: 210px;
+    height: 180px;
+  }
+
+  #megamind {
+    width: 180px;
+    height: 108px;
+  }
+
+  #tealogylogo {
+    width: 180px;
+    height: 120px;
+  }
+
+  #hdfc {
+    width: 180px;
+    height: 90px;
+  }
+
+  #santushtilogo {
+    width: 120px;
+    height: 120px;
+  }
+
+  #sbilogo {
+    width: 120px;
+    height: 60px;
+  }
+}
+
 .scroller>.scroller__inner>li>img:hover {
   transform: scale(1.1);
 }
@@ -169,6 +323,31 @@
   justify-content: center;
   align-items: center;
   gap: 64px;
+}
+
+/* Mobile and tablet responsive adjustments */
+@media (max-width: 480px) {
+  .scroller>.scroller__inner {
+    gap: 24px;
+  }
+
+  .scroller__inner {
+    padding-block: 0.5rem;
+  }
+
+  .scroller {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .scroller>.scroller__inner {
+    gap: 40px;
+  }
+
+  .scroller__inner {
+    padding-block: 0.75rem;
+  }
 }
 
 
