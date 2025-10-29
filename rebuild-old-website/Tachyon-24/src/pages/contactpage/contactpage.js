@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import Footer from "../../components/Footer";
+import SmallSparksBackground from "../../components/SmallSparksBackground";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -55,7 +56,8 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-page-container" style={{ width: "100%", background: "black" }}>
+    <div className="contact-page-container" style={{ width: "100%", background: "#0D0D0D" }}>
+      <SmallSparksBackground />
       {/* Header/Breadcrumb */}
       <div className="contact-header">
         <div className="contact-header-content contact-container">
@@ -67,7 +69,7 @@ const ContactPage = () => {
       <div className="contact-section contact-container" style={{ background: "black", width: "100%" }}>
         <div className="contact-grid">
           <div className="contact-image" style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <img src="/big3.jpg" alt="Contact" style={{ width: "30vw" }} />
+            <img src="https://images.wallpapersden.com/image/download/transformers-movie-rise-of-the-beasts_bmZlaW2UmZqaraWkpJRnZm5lrWZobWk.jpg" alt="Contact" style={{ width: "45vw", height: "60vh", objectFit: "cover" }} />
           </div>
 
           <div className="contact-form-container" style={{ backgroundColor: "black" }}>
@@ -158,7 +160,7 @@ const ContactPage = () => {
               <div className="contact-icon">
                 <Phone size={32} />
               </div>
-              <p>+91-9799444332</p>
+              <p>+91-9829119008</p>
             </div>
 
             {/* Email */}
