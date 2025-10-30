@@ -56,7 +56,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-page-container" style={{ width: "100%", background: "#0D0D0D" }}>
+    <div className="contact-page-container" style={{ width: "100%", background: "#000000" }}>
       <SmallSparksBackground />
       {/* Header/Breadcrumb */}
       <div className="contact-header">

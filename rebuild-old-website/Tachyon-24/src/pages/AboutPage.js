@@ -105,16 +105,16 @@ const AboutPage = () => {
               CODE MANIA<br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●
               CRYPTIC HUNT<br></br>
-              {/* <span className="dots">{readMoreState.detailsBox2 ? '' : '...'}</span>
-              <span className="more-text" style={{ display: readMoreState.detailsBox2 ? 'inline' : 'none' }}>
-                {' '}The festival will feature hands-on workshops, exhibitions, and talks by industry leaders, focusing on innovations in AI, sustainable tech, and more. Whether you're a student, innovator, or enthusiast, join us to push boundaries, connect with others, and shape the future together!
-              </span> */}
             </p>
-            {/* <button onClick={() => toggleReadMore("detailsBox2")} id="read-more-btn">
-              {readMoreState.detailsBox2 ? "Read Less" : "Read More"}
-            </button> */}
           </div>
-        </div>
+          <div className="details-box-2-img">
+            <img
+              src="/transformersImages/about2.png"
+              alt="Events"
+              className="details-box-2-image"
+            />
+          </div>
+          </div>
 
         <div className="details-box-3">
           <div className="details-box-3-image-slider">
