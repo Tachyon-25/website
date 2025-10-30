@@ -1,9 +1,9 @@
 /* styles.css */
-:root {
+  :root {
     --contact-primary-color: #5130ff;
     --contact-secondary-color: #4a90e2;
-    --contact-bg-dark: #0D0D0D;
-    --contact-bg-darker: #0D0D0D;
+    --contact-bg-dark: #000000;
+    --contact-bg-darker: #000000;
     --contact-bg-darkest: #000000;
     --contact-text-light: #ffffff;
     --contact-text-gray: #9ca3af;
@@ -347,14 +347,14 @@
   }
 /* styles.css */
 :root {
-    --contact-primary-color: #ff3030;
-    --contact-secondary-color: #8b0000;
-    --contact-bg-dark: #1a0000;
-    --contact-bg-darker: #0d0000;
-    --contact-bg-darkest: #000000;
-    --contact-text-light: #ffffff;
-    --contact-text-gray: #9ca3af;
-    --contact-border-color: #2a0000;
+  --contact-primary-color: #ff3030;
+  --contact-secondary-color: #8b0000;
+  --contact-bg-dark: #000000;
+  --contact-bg-darker: #000000;
+  --contact-bg-darkest: #000000;
+  --contact-text-light: #ffffff;
+  --contact-text-gray: #9ca3af;
+  --contact-border-color: #2a0000;
 }
 
 .contact-page-container {
