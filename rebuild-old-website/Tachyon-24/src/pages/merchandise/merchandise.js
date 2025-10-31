@@ -37,7 +37,7 @@ function Merchandise() {
     return (
         <>
             <div className="merchandise">
-                <h1>{product.name}</h1>
+                <h1 className="metallic-blue">{product.name}</h1>
 
                 <div className="merchimg">
                     <div className="carousel-item">

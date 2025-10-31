@@ -10,7 +10,7 @@ export const useMerchandise = () => useContext(MerchandiseContext);
 // Provider component
 export const MerchandiseProvider = ({ children }) => {
     const product = {
-        name: "Shinzo Wo Sasageyo",
+        name: "Transform Yourself!",
         price: 450,
         images: [
             "./assests/Front.png",

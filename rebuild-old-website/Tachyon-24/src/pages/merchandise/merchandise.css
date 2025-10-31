@@ -22,13 +22,13 @@
     gap: 2rem;
     font-family: Lemon-Milk;
     background:    
-    linear-gradient(to bottom, black 5%, transparent 35%, black 63%),
-    linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
+    linear-gradient(to bottom, rgb(42, 41, 41) 5%, transparent 35%, rgb(11, 11, 11) 65%),
+    linear-gradient(to bottom, transparent 5%, rgba(30, 22, 22, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
     
-    url("../../../public/mangapanel3.jpg"),
+    url("../../../public/merchbg2.jpg"),
     linear-gradient(to bottom, #fc5f3c, transparent 70%);
-    background-position: center 15%;
-    background-size: 100% 100%,100% 100%, 100% 55%,  100% 100%;
+    background-position: center center;
+    background-size: 100% 100%,100% 100%, 100% 100%,  100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -124,11 +124,27 @@
 /* Typography */
 .merchandise h1 {
     font-size: 3rem;
-    color:#fc5f3c;
+    /* color replaced by .metallic-blue gradient */
     text-align: center;
     margin-bottom: 1.5rem;
     margin-top: 10vh;
 }
+
+/* Shiny metallic blue text */
+.metallic-blue {
+    font-size: 3rem;
+    display: inline-block;
+    position: relative;
+    /* blue metallic gradient */
+    background: linear-gradient(135deg, #bfefff 0%, #6ed1ff 30%, #1e90ff 60%, #003f8a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* subtle depth */
+    text-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Removed the glossy overlay pseudo-element so the text shows only the metallic gradient and subtle depth. */
 
 .merchandise h3 {
     font-size: clamp(1rem, 3vw, 1.2rem);
@@ -366,12 +382,12 @@
     }
     .merchandise{
         background: 
-        linear-gradient(to bottom, black 5%, transparent 50%, black 55%),
-        linear-gradient(to bottom, transparent 5%, rgba(83, 83, 83, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
+        linear-gradient(to bottom, rgb(171, 165, 165) 5%, transparent 50%, rgb(230, 221, 221) 55%),
+        linear-gradient(to bottom, transparent 100%, rgba(214, 202, 202, 0.455)  10%,rgba(122, 121, 121, 0.756) 65%, transparent 100%),
         url("../../../public/mangapanel4.jpg"),
-        linear-gradient(to bottom, #fc5f3c, transparent 70%);
-        background-position: center 12%;
-        background-size: 100% 100%, 100% 100%, 100% 50%,  100% 100%;
+        linear-gradient(to bottom, #797877, transparent 70%);
+        background-position: center center;
+        background-size: 100% 100%, 100% 100%, 100% 100%,  100% 100%;
         background-repeat: no-repeat;
     }
 
