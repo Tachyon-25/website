@@ -1,633 +1,266 @@
-/* Main Container Styles */
-.container {
-  margin-top: 10vw;
-  margin-left: -2vw;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Host Section Styles */
-.hostsection {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 2vw;
-  margin-top: 2vw;
-  margin-bottom: 5vw;
+body {
+  background: #000;
+  font-family: "Poppins", sans-serif;
+  color: white;
 }
 
-/* Organizer and Co-organizer Section Styles */
-.organizer-section,
-.coorganizer-section {
+/* -------------------- Gallery Wrapper -------------------- */
+.gallery-wrapper {
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  max-width: 400px;
-  height: 100%;
-}
-
-.organizer-section img,
-.coorganizer-section img {
-  width: 100%;
-}
-
-.organizer-section {
-  background-image: url("../../assests/team/main-qimg-e023e6d31c3f1dd8ad673464e1b52c08-lq.jpg");
-}
-
-/* Core Team Section Styles */
-.core-team-section {
-  display: flex;
-  flex-wrap: wrap;
+  gap: 50px;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  width: 100%;
-  margin-left: -3vw;
 }
 
-/* Team Member Styles */
-.team-member {
-  background-image: url("../../assests/team/c6c2ceb6baa9990646e5466518b470da.png");
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
   text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: calc(33.33% - 100px);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
-.team-member img {
+/* -------------------- Gallery Layout -------------------- */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+  gap: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* -------------------- Panel -------------------- */
+.panel {
+  flex: 1;
+  height: 500px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Expand on hover */
+.panel:hover {
+  flex: 6;
+  transform: scale(1.03);
+  z-index: 5;
+  box-shadow: 0 8px 24px rgba(255, 87, 51, 0.3);
+}
+
+/* Gradient overlay */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15));
+  z-index: 1;
+  transition: background 0.5s ease;
+}
+
+.panel:hover::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+}
+
+/* -------------------- Overlay Text -------------------- */
+.overlay {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
   width: 100%;
+  text-align: left;
+  transition: all 0.4s ease-in-out;
 }
 
-.team-member h3,
-.team-member p {
-  color: white;
+.overlay h2 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: 600;
+  transition: all 0.4s ease;
 }
 
-/* Modal Overlay Styles */
-.modal-overlay {
+.panel:hover .overlay h2 {
+  writing-mode: horizontal-tb;
+  transform: none;
+  font-size: 1.4rem;
+}
+
+.overlay p {
+  font-size: 0.95rem;
+  color: #ff5733;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.panel:hover .overlay p {
+  opacity: 1;
+}
+
+/* -------------------- Modal -------------------- */
+.organizer-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000000;
-}
-
-/* Modal Content Styles */
-.modal-content {
-  background-color: rgba(26, 26, 26, 0.7);
-  backdrop-filter: blur(16px);
-  border-radius: 15px;
-  padding: 30px;
-  width: 90%;
-  max-width: 1200px;
-  margin-top: 40px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  color: white;
-}
-
-/* Modal Close Button */
-.modal-close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.modal-close:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Modal Title */
-.modal-title {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
-}
-
-/* Modal Body Layout */
-.modal-body {
-  display: flex;
-  gap: 30px;
-}
-
-/* Leads Section Styles */
-.leads-section {
-  flex: 2;
-  min-width: 0;
-  margin-top: 100px;
-}
-
-.leads-container {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 15px;
-}
-
-/* Lead Card Styles */
-.lead-card {
-  flex: 1;
-  min-width: 200px;
-  max-width: 300px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-}
-
-.lead-card h3 {
-  text-align: center;
-  margin-bottom: 15px;
-  color: #76B900;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-/* Lead Info Styles */
-.lead-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.lead-image {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.lead-info h4 {
-  margin: 5px 0;
-  color: #fff;
-  font-size: 1.1rem;
-  text-align: center;
-  font-weight: 500;
-}
-
-.lead-info p {
-  color: #ccc;
-  margin: 0;
-  text-align: center;
-}
-
-/* Members Section Styles */
-.members-section {
-  flex: 1;
-  min-width: 250px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #76B900;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.members-section h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-/* Members List Styles */
-.members-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-/* Member Item Styles */
-.member-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.member-name {
-  margin: 0;
-  color: #fff;
-  font-weight: 500;
-}
-
-.member-designation {
-  margin: 5px 0 0;
-  color: #ccc;
-  font-size: 0.9rem;
-}
-
-/* No Members Message */
-.no-members {
-  color: #666;
-  font-style: italic;
-}
-
-/* Custom Scrollbar Styles */
-.leads-container::-webkit-scrollbar,
-.members-list::-webkit-scrollbar,
-.modal-content::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.leads-container::-webkit-scrollbar-track,
-.members-list::-webkit-scrollbar-track,
-.modal-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-.leads-container::-webkit-scrollbar-thumb,
-.members-list::-webkit-scrollbar-thumb,
-.modal-content::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-}
-
-.leads-container::-webkit-scrollbar-thumb:hover,
-.members-list::-webkit-scrollbar-thumb:hover,
-.modal-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .container {
-    margin-top: 30vw;
-    padding: 0 5vw;
-  }
-
-  .core-team-section {
-    gap: 20px;
-  }
-
-  .team-member {
-    width: 300px;
-    padding: 10px;
-  }
-
-  .modal-content {
-    width: 95%;
-    padding: 1.5rem;
-  }
-
-  .modal-body {
-    flex-direction: column;
-  }
-
-  .leads-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-right: 0;
-    padding-bottom: 2rem;
-    margin-top: 100px;
-  }
-
-  .leads-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .members-section {
-    padding-left: 0;
-    padding-top: 2rem;
-  }
-  .member-designation {
-    color: #76B900;
-  }
-  .lead-image {
-    width: 120px;
-    height: 120px;
-  }
-
-  .hostsection {
-    margin-top: 20vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .organizer-section,
-  .coorganizer-section {
-    max-width: 300px;
-  }
-  .coorganizer-section {
-    height: 100%;
-  }
-  .coorganizer-section img {
-    width: 100%;
-  }
-  .container {
-    margin-top: 30vw;
-    padding: 0 5vw;
-  }
-
-  .core-team-section {
-    gap: 10px;
-    margin-left: -11vw;
-  }
-
-  .team-member {
-    width: 300px;
-  }
-
-  .organizer-section img,
-  .coorganizer-section img {
-    width: 60%;
-  }
-
-  .hostsection {
-    margin-left: -7.5vw;
-  }
-}
-/* Organizer Modal Styles */
-.organizer-modal-overlay {
-  position: fixed;
-  top: 10%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(20px);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
 }
 
 .organizer-modal-wrapper {
-  background-color: rgba(26, 26, 26, 0.7);
-  backdrop-filter: blur(16px);
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 600px;
-  width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 87, 51, 0.3);
+  border-radius: 16px;
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(255, 87, 51, 0.2);
+  color: #fff;
+  animation: slideUp 0.4s ease;
 }
 
 .organizer-modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  border: none;
+  top: 15px;
+  right: 20px;
   background: none;
-  font-size: 1.5rem;
+  border: none;
+  color: #ff5733;
+  font-size: 2rem;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.organizer-modal-close:hover {
+  color: #fff;
 }
 
 .organizer-modal-content {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.organizer-modal-header {
-  text-align: center;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.organizer-modal-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.organizer-modal-title {
-  margin: 0.5rem 0;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.organizer-modal-role {
-  color: #666;
-  font-size: 1.1rem;
-}
-
-.organizer-modal-details {
+.organizer-modal-left,
+.organizer-modal-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.organizer-detail-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.organizer-detail-label {
-  font-weight: bold;
-  color:#512fff;
-}
-
-.organizer-detail-value {
-  color: #666;
-}
-
-.organizer-responsibilities-list {
-  margin: 0;
-  padding-left: 1.5rem;
-  color: #666;
-}
-
-.organizer-responsibilities-list li {
-  margin-bottom: 0.5rem;
-}
-/* Organizer Modal Styles */
-.organizer-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color:transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.organizer-modal-wrapper {
-  
-  border-radius: 8px;
-  width: 95%;
-  max-width: 1200px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  padding: 2rem;
-}
-
-.organizer-modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  border: none;
-  background: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.organizer-modal-content {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 2rem;
-  align-items: start;
-  min-height: 500px;
-}
-
-/* Left and Right sections */
-.organizer-modal-left,
-.organizer-modal-right {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-/* Center section with photo */
 .organizer-modal-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
+  flex: 1;
   text-align: center;
 }
 
-.organizer-photo-container {
-  width: 300px;
-  height: 300px;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
 .organizer-modal-image {
-  width: 100%;
-  height: 100%;
-  
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  border: 3px solid #ff5733;
 }
 
 .organizer-modal-title {
-  margin: 0.5rem 0;
-  font-size: 2rem;
-  color:#76B900;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff5733;
 }
 
 .organizer-modal-role {
-  color: white;
-  font-size: 1.2rem;
-}
-
-/* Detail items styling */
-.organizer-detail-item {
-
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.organizer-detail-label {
-  font-weight: bold;
-  color: #76B900;
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-  display: block;
-}
-
-.organizer-detail-value {
-  color: white;
+  color: #ccc;
   font-size: 1rem;
 }
 
+.organizer-detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.organizer-detail-label {
+  font-weight: 600;
+  color: #ff5733;
+}
+
+.organizer-detail-value {
+  color: #ccc;
+}
+
 .organizer-responsibilities-list {
-  margin: 0.5rem 0 0 0;
-  padding-left: 1.5rem;
-  color: white;
+  margin-left: 20px;
+  list-style-type: disc;
+  color: #bbb;
 }
 
-.organizer-responsibilities-list li {
-  margin-bottom: 0.5rem;
+/* -------------------- Animations -------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Responsive design */
-@media (max-width: 1024px) {
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* -------------------- Responsive Modal -------------------- */
+@media (max-width: 768px) {
+  .gallery {
+    flex-wrap: wrap;
+  }
+
+  .panel {
+    width: 100%;
+    height: 400px;
+  }
+
   .organizer-modal-content {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "center"
-      "left"
-      "right";
-  }
-
-  .organizer-modal-left {
-    grid-area: left;
-  }
-
-  .organizer-modal-center {
-    grid-area: center;
-  }
-
-  .organizer-modal-right {
-    grid-area: right;
-  }
-
-  .organizer-photo-container {
-    width: 250px;
-    height: 250px;
-  }
-
-  .organizer-modal-left,
-  .organizer-modal-right {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .organizer-modal-wrapper {
-    padding: 1rem;
-  }
-
-  .organizer-photo-container {
-    width: 200px;
-    height: 200px;
-  }
-
-  .organizer-modal-title {
-    font-size: 1.5rem;
+    flex-direction: column;
+    text-align: center;
   }
 }
