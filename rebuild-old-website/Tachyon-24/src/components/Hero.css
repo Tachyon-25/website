@@ -96,7 +96,7 @@
   z-index: 2;
   max-width: 600px;
   text-align: left;
-  margin: 33px 5vw;
+  margin: 33px 5vw ;
 }
 
 .hero-title,
@@ -312,7 +312,7 @@
   position: relative;
   overflow: hidden;
   color: var(--text-color);
-  margin-top: -100px;
+  margin-top: 0px;
   padding-top: 100px;
   z-index: 2;
   min-height: 100vh;
@@ -463,9 +463,10 @@
 
 .horizontal-line {
   margin: 0 auto;
+  margin-top: 60px;
   width: 100%;
   max-width: 650px;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.3),

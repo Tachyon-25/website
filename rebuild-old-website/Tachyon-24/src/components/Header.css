@@ -103,7 +103,7 @@
   cursor: pointer;
   z-index: 1001;
   margin-right: 10vh;
-  position: absolute;
+  position: fixed;
   right: 0rem;
   top: 4rem;
   transition: transform 0.3s ease;
