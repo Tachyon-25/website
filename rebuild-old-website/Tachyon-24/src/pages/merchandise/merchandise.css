@@ -14,7 +14,7 @@
     min-height: 100vh;
     margin: 0 auto;
     padding: 2rem;
-    padding-top: 15vh;
+    padding-top: 25vh;
     background-color: #000000;
     color: white;
     display: flex;
@@ -24,13 +24,25 @@
     background:    
     linear-gradient(to bottom, rgb(42, 41, 41) 5%, transparent 35%, rgb(11, 11, 11) 65%),
     linear-gradient(to bottom, transparent 5%, rgba(30, 22, 22, 0.455)  10%,rgba(83, 83, 83, 0.756) 65%, transparent 63%),
-    
     url("../../../public/merchbg2.jpg"),
     linear-gradient(to bottom, #fc5f3c, transparent 70%);
     background-position: center center;
-    background-size: 100% 100%,100% 100%, 100% 100%,  100% 100%;
+    background-size: cover, cover, cover, cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
+@media (max-width: 768px) {
+    .merchandise {
+        background-attachment: scroll;
+        padding-top: 18vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .merchandise {
+        padding-top: 15vh;
+    }
 }
 
 .merchandise::before{
@@ -104,6 +116,17 @@
     }
 }
 
+@media (max-width: 480px) {
+    .merchandise {
+        padding: 1rem;
+        padding-top: 10vh;
+    }
+
+    .merchimg {
+        height: 35vh;
+    }
+}
+
 /* Additional carousel controls styling */
 .carousel-control-prev,
 .carousel-control-next {
@@ -128,7 +151,21 @@
     /* color replaced by .metallic-blue gradient */
     text-align: center;
     margin-bottom: 1.5rem;
-    margin-top: 10vh;
+    margin-top: 15vh;
+}
+
+@media (max-width: 768px) {
+    .merchandise h1 {
+        font-size: 2rem;
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .merchandise h1 {
+        font-size: 1.5rem;
+        margin-top: 7vh;
+    }
 }
 
 /* Shiny metallic blue text */
@@ -143,6 +180,18 @@
     color: transparent;
     /* subtle depth */
     text-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 6px 18px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+    .metallic-blue {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .metallic-blue {
+        font-size: 1.5rem;
+    }
 }
 
 /* Removed the glossy overlay pseudo-element so the text shows only the metallic gradient and subtle depth. */
@@ -165,6 +214,23 @@
     border-radius: 6px;
     font-size: 1rem;
     transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .merchandise select,
+    .merchandise input {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .merchandise select,
+    .merchandise input {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+    }
 }
 
 .merchandise select:hover,
@@ -200,6 +266,20 @@
     cursor: pointer;
     
     transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .merchandise button {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .merchandise button {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
 }
 
 .merchandise button:enabled:hover {
@@ -275,6 +355,28 @@
     margin-top: 200px;
 }
 
+@media (max-width: 1024px) {
+    .merchandise-form {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .merchandise-form {
+        margin-top: 50px;
+        padding: 1.5rem;
+        flex-direction: column;
+        background: linear-gradient(to bottom, rgba(21, 21, 21, 0.9), rgba(21, 21, 21, 0.9) 45%, transparent 70%);
+    }
+}
+
+@media (max-width: 480px) {
+    .merchandise-form {
+        margin-top: 30px;
+        padding: 1rem;
+    }
+}
+
 .user-info{
     display: flex;
     justify-content: center;
@@ -282,12 +384,34 @@
     width: 50%;
 }
 
+.user-info .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .user-info {
+        width: 100%;
+        margin: 12px 0;
+    }
+}
+
 .user-select-size{
     display: flex;
     justify-content: flex-start;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     width: 25%;
+}
+
+@media (max-width: 768px) {
+    .user-select-size {
+        width: 100%;
+        margin: 12px 0;
+        align-items: center;
+    }
 }
 
 
@@ -295,12 +419,16 @@
 .form-group {
     margin-bottom: 3rem;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .select-form-group {
     box-sizing: border-box;
     width: 100%;
     margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Heading Style */
@@ -310,29 +438,39 @@
     font-weight: 600;
     margin-bottom: 0.5rem;
     box-sizing: border-box;
+    text-align: center;
+    width: 100%;
 }
 
 /* Select Style */
 .form-select {
     width: 100%;
+    max-width: 400px;
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f8f8f8;
     font-size: 1rem;
     margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 /* Input Field Style */
 .form-input {
     width: 100%;
+    max-width: 400px;
     padding: 1rem;
     margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f8f8f8;
     font-size: 1rem;
     box-sizing: border-box;
+    display: block;
 }
 
 .form-input::placeholder {
@@ -342,6 +480,7 @@
 /* Button Style */
 .form-button {
     width: 100%;
+    max-width: 400px;
     padding: 1rem 2rem;
     background-color: #007BFF;
     color: white;
@@ -352,6 +491,9 @@
     transition: background-color 0.3s;
     box-sizing: border-box;
     margin-bottom: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .form-button:disabled {
@@ -381,24 +523,21 @@
     .form-button {
         padding: 0.8rem 1.5rem;
     }
-    .merchandise{
-        background: 
-        linear-gradient(to bottom, rgb(171, 165, 165) 5%, transparent 50%, rgb(230, 221, 221) 55%),
-        linear-gradient(to bottom, transparent 100%, rgba(214, 202, 202, 0.455)  10%,rgba(122, 121, 121, 0.756) 65%, transparent 100%),
-        url("../../../public/mangapanel4.jpg"),
-        linear-gradient(to bottom, #797877, transparent 70%);
-        background-position: center center;
-        background-size: 100% 100%, 100% 100%, 100% 100%,  100% 100%;
-        background-repeat: no-repeat;
+}
+
+@media (max-width: 480px) {
+    .form-input, .form-select {
+        padding: 0.7rem;
+        font-size: 0.9rem;
     }
 
-    .merchandise h1{
-        font-size: 1.5rem;
+    .form-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
     }
 
-    .merchandise-form{
-        margin-top: 20px;
-        background : linear-gradient(to bottom, rgb(21, 21, 21), rgb(21, 21, 21) 45%, transparent 70%)
+    .form-heading {
+        font-size: 1rem;
     }
 }
 
