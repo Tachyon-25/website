@@ -296,6 +296,251 @@
 
 /* Responsive Breakpoints */
 @media screen and (max-width: 991px) {
+
+  .container {
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+  }
+
+
+
+  .paragraph_1 {
+
+    font-size: 16px;
+
+  }
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 20px;
+
+    height: 20px;
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+  .footer_section{
+
+    margin-top: 50px;
+
+  }
+
+  /*    * REMOVED: .container { margin-top: 100px !important; }
+
+   * This was causing a large gap inside the footer on mobile.
+
+   * The base style of margin-top: 10px !important; will now apply.
+
+   */
+
+
+
+  .footer_section {
+
+    padding: 30px 15px;
+
+  }
+
+
+
+  .link-logo-footer {
+
+    margin-bottom: 60px;
+
+  }
+
+
+
+  .logo_footer {
+
+    height: 100px;
+
+  }
+
+
+
+  .paragraph_1_margin_bottom_80px {
+
+    margin-bottom: 60px;
+
+  }
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 15px;
+
+    height: 15px;
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 479px) {
+
+  .footer_section{
+
+    margin-top: 50px;
+
+  }
+
+  .container {
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+    /*      * REMOVED: margin-top: 50px !important;
+
+     * This was also causing a large gap.
+
+     */
+
+  }
+
+
+
+  .footer_section {
+
+    padding: 20px 10px;
+
+  }
+
+
+
+  .link-logo-footer {
+
+    margin-bottom: 50px;
+
+  }
+
+
+
+  .logo_footer {
+
+    height: 100px;
+
+  }
+
+
+
+  .paragraph_1 {
+
+    font-size: 7px;
+
+  }
+
+
+
+  .paragraph_1_margin_bottom_80px {
+
+    margin-bottom: 60px;
+
+  }
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 2px;
+
+    height: 2px;
+
+  }
+
+}
+
+
+
+/* Extra small devices */
+
+@media screen and (max-width: 360px) {
+
+  .footer_section{
+
+    /* REDUCED: Changed from 100px to 50px for consistency */
+
+    margin-top: 50px; 
+
+  }
+
+
+
+  .container{
+
+    /*      * REMOVED: margin-top: 50px !important;
+
+     * This was also causing a large gap.
+
+     */
+
+  }
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 2px;
+
+    height: 4px;
+
+ }
+
+
+
+  .logo_footer {
+
+    height: 50px;
+
+  }
+
+
+
+  .paragraph_1 {
+
+    font-size: 7px;
+
+  }
+
+}
+/* @media screen and (max-width: 991px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -387,7 +632,7 @@
 }
 
 /* Extra small devices */
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
   .footer_section{
     margin-top: 100px;
   }
@@ -411,4 +656,4 @@
   .paragraph_1 {
     font-size: 12px;
   }
-}
+} */

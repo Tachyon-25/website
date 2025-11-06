@@ -355,6 +355,7 @@ const Gallery = () => {
 
   return (
     <div className="gallery-wrapper">
+        <h2 className="section-title">Our Team</h2>
       <div className="gallery">
         {people.map((person, index) => (
           <div
