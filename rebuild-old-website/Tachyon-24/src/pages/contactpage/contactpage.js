@@ -76,7 +76,7 @@ const ContactPage = () => {
             <h2>Get in touch!</h2>
             <p>
               For specific enquiries, kindly email us at{" "}
-              <a href="mailto:cse@juetguna.in">tachyon24juet@gmail.com</a>
+              <a href="mailto:cse@juetguna.in">tachyon25juet@gmail.com</a>
             </p>
 
             <form onSubmit={handleSubmit}>
@@ -168,7 +168,7 @@ const ContactPage = () => {
               <div className="contact-icon">
                 <Mail size={32} />
               </div>
-              <a href="mailto:cse@juetguna.in"> tachyon24juet@gmail.com</a>
+              <a href="mailto:cse@juetguna.in"> tachyon25juet@gmail.com</a>
             </div>
 
             {/* Website */}

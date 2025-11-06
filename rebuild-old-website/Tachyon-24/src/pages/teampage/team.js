@@ -318,6 +318,8 @@ const Gallery = () => {
   ];
 
   // ✅ Click logic - Check if department has Co-Heads or Team Members
+  
+
   const handleCardClick = (person, index) => {
     if (modalNames.includes(person.name)) {
       if (active === index) {
