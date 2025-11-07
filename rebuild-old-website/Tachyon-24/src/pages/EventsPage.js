@@ -9,8 +9,8 @@ const eventsData = {
     "Rospinot": [
       { id: 1, name: "Robo Bazzinga", description: "Rospinot fun maze solving challenge for robots", venue: "AB Corridor", time: "17th, 10:00 AM" },
       { id: 2, name: "Cicada 036", description: "A mysterious online puzzle, with complex cryptography and intelligence clues", venue: "LT-2", time: "16th, 2:00 PM - 6:00 PM"},
-      { id: 3, name: "Robo Soccer", description: "Robots compete to score goals on the field", venue: "AB Corridor", time: "16th, 6:00 PM - 8:00 PM" },
-      { id: 4, name: "The Escape Room", description: "Robots race to solve clues and escape", venue: "AB Corridor", time: "17th, 10:00 AM" },
+      { id: 3, name: "Robo race", description: "Robots compete to score goals on the field", venue: "AB Corridor", time: "16th, 6:00 PM - 8:00 PM" },
+      ,
     ],
     "CSI-Bitwise": [
       { id: 5, name: "Newbie Code", description: "Kodeathon for freshman year", venue: "CL-2, CL-3, CL-4, CL-5" },
@@ -28,14 +28,14 @@ const eventsData = {
     ],
     "CSI-Botnet": [
       { id: 15, name: "Cryptic Hunt", description: "Decode and debug your way through a cryptic, beginner-friendly hunt", venue: "CL-4" },
-      { id: 16, name: "MineTech Arena", description: "Minecraft technical challenge", venue: "Open ground near Nehru Plaza" },
+      { id: 16, name: "Mine Arena", description: "Minecraft technical challenge", venue: "Open ground near Nehru Plaza" },
       { id: 17, name: "LAN Party", description: "Multiplayer gaming event", venue: "CL-2" },
     ],
     "CSI-MM&UI/UX": [
-      { id: 18, name: "Memeathon", description: "Creative meme making competition", venue: "Online" },
+      { id: 18, name: "GLITCH 1", description: "E-sports zone", venue: "LT-6 LT-7" },
       { id: 19, name: "Arcade Box", description: "A fun retro game base console system for reliving the old games era", venue: "Nehru Plaza" },
       { id: 20, name: "Typoolymics", description: "Speed typing event", venue: "CL-3" },
-      { id: 21, name: "GLITCH", description: "E-sports zone", venue: "Nehru Plaza" },
+      { id: 21, name: "GLITCH 2", description: "E-sports zone", venue: "LT-5" },
     ],
     "Mozilla": [
       { id: 22, name: "Website Pixel Art", description: "Fun event where students have to find correct answers for problems", venue: "Online" },
