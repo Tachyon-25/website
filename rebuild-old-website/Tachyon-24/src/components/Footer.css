@@ -206,10 +206,7 @@
   text-align: center;
 }
 
-.paragraph_1_margin_bottom_80px {
-  margin-bottom: 80px;
-}
-
+/* link styles */
 .link_paragraph_1 {
   color: white;
   text-decoration: none;
@@ -399,6 +396,69 @@
 
 }
 
+/* Additional mobile-friendly improvements */
+@media screen and (max-width: 480px) {
+  .footer_section {
+    padding: 24px 16px;
+    align-items: center;
+  }
+
+  .wrap_footer {
+    width: 100%;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  /* Make logo smaller and remove negative margins that break layout on very small screens */
+  .logo_footer {
+    height: 72px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  .link-logo-footer {
+    margin-bottom: 22px;
+  }
+
+  /* Increase readability and touch targets */
+  .paragraph_1 {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding: 0 6px;
+  }
+
+  .paragraph_1_margin_bottom_80px {
+    margin-bottom: 20px;
+  }
+
+  /* Stack content vertically and ensure links wrap */
+  .wrap_footer > * {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Hide non-essential decorative elements for performance on small devices */
+  .spark,
+  .spark-1,
+  .spark-2,
+  .spark-4,
+  .transformer-gear,
+  .red-line {
+    display: none !important;
+  }
+
+  /* Ensure adequate contrast and smaller hover effects don't apply on touch devices */
+  .link_paragraph_1:hover::after,
+  .link_paragraph_1:hover {
+    width: 0;
+    transform: none;
+    text-shadow: none;
+  }
+}
+
 
 
 @media screen and (max-width: 479px) {
@@ -497,15 +557,7 @@
 
 
 
-  .container{
-
-    /*      * REMOVED: margin-top: 50px !important;
-
-     * This was also causing a large gap.
-
-     */
-
-  }
+  /* cleaned: removed empty .container ruleset that caused linting issues */
 
 
 
