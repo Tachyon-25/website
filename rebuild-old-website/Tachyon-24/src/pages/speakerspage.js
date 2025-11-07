@@ -4,22 +4,14 @@
 
   const speakers = [
     {
-      name: "Harsh Sharma",
-      role: "Founder @Shreyians Coding School",
-      imageUrl: "./harshsharma.jpg",
-      linkedIn: "https://in.linkedin.com/in/harshvandanasharma",
+      name: "Gaurish Baliga",
+      role: "Software Engineer @Rubrik",
+      imageUrl: "./5cc7f4e1-368d-43d8-a887-94db3d175b3d.jpg",
+      linkedIn: "https://www.linkedin.com/in/gaurish-baliga-443894131/",
       alumini:false,
-      instagram: "https://www.instagram.com/iamharshvandanasharma/?hl=en",
-      details: "Harsh Sharma is the visionary founder of **Shreyians Coding School**, an innovative platform dedicated to empowering the next generation of tech leaders through coding and data science education."  },
-    {
-      name: "Kushal Vijay",
-      role: "SDE-2 @Microsoft",
-      imageUrl: "./kushalviajy.jpg",
-      alumini:false,
-      linkedIn: "https://in.linkedin.com/in/kushalvijay",
-      instagram: "https://www.instagram.com/kushal_vijay_/?hl=en",
-      details: "Kushal Vijay is an experienced Software Development Engineer (SDE-2) at Microsoft, specializing in building innovative technologies . He plays a key role in shaping the future of the country."
-    }
+      instagram: "",
+      details: "Avid Learner | Software Engineer @Rubrik | Ex-Google | Master @Codeforces | ICPC Asia West Finalist | ETHGlobal Finalist"  },
+   
     ,
     
   ];
