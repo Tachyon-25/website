@@ -1,6 +1,6 @@
 .footer_section {
   /* Subdued dark theme background for the footer to blend with site */
-  background: linear-gradient(180deg, #060606 0%, #0b0b0b 50%, #080808 100%);
+  background: linear-gradient(180deg, #4a4a4a 0%, #222222 60%, #000000 100%);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -80,22 +80,22 @@
   content: '⚙';
   font-size: 30px;
   display: block;
-  filter: drop-shadow(0 0 10px rgba(30, 144, 255, 0.6));
+  filter: drop-shadow(0 0 10px rgba(34, 35, 35, 0.6));
 }
 
 .gear-small::before {
   font-size: 20px;
-  color: #1E90FF;
+  color: #61616d;
 }
 
 .gear-medium::before {
   font-size: 30px;
-  color: #DC143C;
+  color: #575656;
 }
 
 .gear-large::before {
   font-size: 40px;
-  color: #4B0082;
+  color: #1b1a2e;
 }
 
 @keyframes gearAnimation {
@@ -120,7 +120,7 @@
 }
 
 .container {
-  margin-top: 100px !important;
+  margin-top: 10px !important;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -141,6 +141,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -150,8 +151,10 @@
 }
 
 .logo_footer {
-  height: 400px;
+  height: 350px;
   width: auto;
+  margin-top: -50px;
+  margin-bottom: -100px;
   display: block;
   /* Make the logo completely static: remove reveal animation and any transitions */
   animation: none !important;
@@ -191,9 +194,11 @@
 /* Paragraphs */
 .paragraph_1 {
   color: #808080;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0;
+  margin-top: -65px;
+  margin-bottom: -20px;
   text-transform: uppercase;
 }
 
@@ -201,10 +206,7 @@
   text-align: center;
 }
 
-.paragraph_1_margin_bottom_80px {
-  margin-bottom: 80px;
-}
-
+/* link styles */
 .link_paragraph_1 {
   color: white;
   text-decoration: none;
@@ -273,24 +275,324 @@
   0%,
   100% {
     transform: translate(0, 0) rotate(0deg);
-    filter: drop-shadow(0 0 5px rgba(30, 144, 255, 0.5));
+    filter: drop-shadow(0 0 5px rgba(23, 30, 37, 0.5));
   }
   25% {
     transform: translate(10px, -10px) rotate(90deg);
-    filter: drop-shadow(0 0 10px rgba(220, 20, 60, 0.6));
+    filter: drop-shadow(0 0 10px rgba(88, 85, 86, 0.6));
   }
   50% {
     transform: translate(15px, -5px) rotate(180deg);
-    filter: drop-shadow(0 0 15px rgba(30, 144, 255, 0.8));
+    filter: drop-shadow(0 0 15px rgba(58, 58, 58, 0.8));
   }
   75% {
     transform: translate(5px, -15px) rotate(270deg);
-    filter: drop-shadow(0 0 10px rgba(220, 20, 60, 0.6));
+    filter: drop-shadow(0 0 10px rgba(129, 126, 127, 0.6));
   }
 }
 
 /* Responsive Breakpoints */
 @media screen and (max-width: 991px) {
+
+  .container {
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+  }
+
+
+
+  .paragraph_1 {
+
+    font-size: 16px;
+
+  }
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 20px;
+
+    height: 20px;
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+  .footer_section{
+
+    margin-top: 50px;
+
+  }
+
+  /*    * REMOVED: .container { margin-top: 100px !important; }
+
+   * This was causing a large gap inside the footer on mobile.
+
+   * The base style of margin-top: 10px !important; will now apply.
+
+   */
+
+
+
+  .footer_section {
+
+    padding: 30px 15px;
+
+  }
+
+
+
+  .link-logo-footer {
+
+    margin-bottom: 60px;
+
+  }
+
+
+
+  .logo_footer {
+
+    height: 100px;
+
+  }
+
+
+
+  .paragraph_1_margin_bottom_80px {
+
+    margin-bottom: 60px;
+
+  }
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 15px;
+
+    height: 15px;
+
+  }
+
+}
+
+/* Additional mobile-friendly improvements */
+@media screen and (max-width: 480px) {
+  .footer_section {
+    padding: 24px 16px;
+    align-items: center;
+  }
+
+  .wrap_footer {
+    width: 100%;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  /* Make logo smaller and remove negative margins that break layout on very small screens */
+  .logo_footer {
+    height: 72px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  .link-logo-footer {
+    margin-bottom: 22px;
+  }
+
+  /* Increase readability and touch targets */
+  .paragraph_1 {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding: 0 6px;
+  }
+
+  .paragraph_1_margin_bottom_80px {
+    margin-bottom: 20px;
+  }
+
+  /* Stack content vertically and ensure links wrap */
+  .wrap_footer > * {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Hide non-essential decorative elements for performance on small devices */
+  .spark,
+  .spark-1,
+  .spark-2,
+  .spark-4,
+  .transformer-gear,
+  .red-line {
+    display: none !important;
+  }
+
+  /* Ensure adequate contrast and smaller hover effects don't apply on touch devices */
+  .link_paragraph_1:hover::after,
+  .link_paragraph_1:hover {
+    width: 0;
+    transform: none;
+    text-shadow: none;
+  }
+}
+
+
+
+@media screen and (max-width: 479px) {
+
+  .footer_section{
+
+    margin-top: 50px;
+
+  }
+
+  .container {
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+    /*      * REMOVED: margin-top: 50px !important;
+
+     * This was also causing a large gap.
+
+     */
+
+  }
+
+
+
+  .footer_section {
+
+    padding: 20px 10px;
+
+  }
+
+
+
+  .link-logo-footer {
+
+    margin-bottom: 50px;
+
+  }
+
+
+
+  .logo_footer {
+
+    height: 100px;
+
+  }
+
+
+
+  .paragraph_1 {
+
+    font-size: 7px;
+
+  }
+
+
+
+  .paragraph_1_margin_bottom_80px {
+
+    margin-bottom: 60px;
+
+  }
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 2px;
+
+    height: 2px;
+
+  }
+
+}
+
+
+
+/* Extra small devices */
+
+@media screen and (max-width: 360px) {
+
+  .footer_section{
+
+    /* REDUCED: Changed from 100px to 50px for consistency */
+
+    margin-top: 50px; 
+
+  }
+
+
+
+  /* cleaned: removed empty .container ruleset that caused linting issues */
+
+
+
+  .spark,
+
+  .spark-1,
+
+  .spark-2,
+
+  .spark-4 {
+
+    width: 2px;
+
+    height: 4px;
+
+ }
+
+
+
+  .logo_footer {
+
+    height: 50px;
+
+  }
+
+
+
+  .paragraph_1 {
+
+    font-size: 7px;
+
+  }
+
+}
+/* @media screen and (max-width: 991px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -382,7 +684,7 @@
 }
 
 /* Extra small devices */
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
   .footer_section{
     margin-top: 100px;
   }
@@ -406,4 +708,4 @@
   .paragraph_1 {
     font-size: 12px;
   }
-}
+} */

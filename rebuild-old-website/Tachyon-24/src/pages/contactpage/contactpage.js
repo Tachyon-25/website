@@ -68,15 +68,19 @@ const ContactPage = () => {
       {/* Contact Form Section */}
       <div className="contact-section contact-container" style={{ background: "black", width: "100%" }}>
         <div className="contact-grid">
-          <div className="contact-image" style={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <img src="https://images.wallpapersden.com/image/download/transformers-movie-rise-of-the-beasts_bmZlaW2UmZqaraWkpJRnZm5lrWZobWk.jpg" alt="Contact" style={{ width: "45vw", height: "60vh", objectFit: "cover" }} />
+          <div className="contact-image">
+            <img 
+              src="https://images.wallpapersden.com/image/download/transformers-movie-rise-of-the-beasts_bmZlaW2UmZqaraWkpJRnZm5lrWZobWk.jpg" 
+              alt="Contact" 
+              className="contact-main-image"
+            />
           </div>
 
           <div className="contact-form-container" style={{ backgroundColor: "black" }}>
             <h2>Get in touch!</h2>
             <p>
               For specific enquiries, kindly email us at{" "}
-              <a href="mailto:cse@juetguna.in">tachyon24juet@gmail.com</a>
+              <a href="mailto:cse@juetguna.in">tachyon25juet@gmail.com</a>
             </p>
 
             <form onSubmit={handleSubmit}>
@@ -168,7 +172,7 @@ const ContactPage = () => {
               <div className="contact-icon">
                 <Mail size={32} />
               </div>
-              <a href="mailto:cse@juetguna.in"> tachyon24juet@gmail.com</a>
+              <a href="mailto:cse@juetguna.in"> tachyon25juet@gmail.com</a>
             </div>
 
             {/* Website */}

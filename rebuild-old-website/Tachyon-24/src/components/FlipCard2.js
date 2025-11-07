@@ -191,7 +191,7 @@ const FlipSlider = () => {
                 className={`tab-pane ${activeTab === tab.name ? "active" : ""}`}
                 role="tabpanel"
               >
-                <h2 className="tab-title">{tab.name}</h2>
+                <h2 className="tab-title"></h2>
                 <div
                   className={`card-container ${
                     tab.name === "CSE" ? "cse-marquee" : ""
