@@ -1,39 +1,62 @@
-import React, { useEffect } from 'react';
-// import { Link } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import './Footer.css';
-import footerLogo from '../assests/tachyon_25.png'
+import footerLogo from '../assests/tachyon_25.png';
 
 const Footer = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
-        // Create and animate transformer gears
-        const createGear = () => {
-            const gear = document.createElement('div');
-            const gearTypes = ['gear-small', 'gear-medium', 'gear-large'];
-            gear.className = `transformer-gear ${gearTypes[Math.floor(Math.random() * gearTypes.length)]}`;
-            
-            // Random position
-            gear.style.left = Math.random() * 100 + 'vw';
-            gear.style.top = Math.random() * 100 + 'vh';
-            
-            // Random rotation direction
-            gear.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
-            
-            document.querySelector('.footer_section').appendChild(gear);
-            
-            // Remove gear after animation
-            setTimeout(() => {
-                gear.remove();
-            }, 3000);
+        // Check if device is mobile
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 767);
         };
 
-        // Create gears periodically
-        const intervalId = setInterval(createGear, 500);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
 
-        return () => clearInterval(intervalId);
-    }, []);
+        // Only create gears on non-mobile devices for better performance
+        if (!isMobile) {
+            const createGear = () => {
+                const gear = document.createElement('div');
+                const gearTypes = ['gear-small', 'gear-medium', 'gear-large'];
+                gear.className = `transformer-gear ${gearTypes[Math.floor(Math.random() * gearTypes.length)]}`;
+                
+                gear.style.left = Math.random() * 100 + 'vw';
+                gear.style.top = Math.random() * 100 + 'vh';
+                gear.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
+                
+                const footerSection = document.querySelector('.footer_section');
+                if (footerSection) {
+                    footerSection.appendChild(gear);
+                    
+                    setTimeout(() => {
+                        gear.remove();
+                    }, 3000);
+                }
+            };
+
+            const intervalId = setInterval(createGear, 500);
+
+            return () => {
+                clearInterval(intervalId);
+                window.removeEventListener('resize', checkMobile);
+            };
+        }
+
+        return () => {
+            window.removeEventListener('resize', checkMobile);
+        };
+    }, [isMobile]);
 
     const SparkSVG = ({ scale = 1 }) => (
-        <svg width={91 * scale} height={121 * scale} viewBox="0 0 91 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg 
+            width={91 * scale} 
+            height={121 * scale} 
+            viewBox="0 0 91 121" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+        >
             <circle cx="46" cy="60" r="19" stroke="url(#paint0_linear_37_95)" strokeWidth="2"/>
             <g filter="url(#filter0_f_37_95)">
                 <circle cx="46" cy="60" r="11" fill="white"/>
@@ -73,54 +96,57 @@ const Footer = () => {
     );
 
     return (
-        <div className="footer_section">
-            
+        <footer className="footer_section" role="contentinfo" aria-label="Site footer">
             <div className="container">
                 <div className="wrap_footer">
-                    <div className="divider_footer"></div>
-                    <a href="/" className="link-logo-footer">
+                    <a href="/" className="link-logo-footer" aria-label="Tachyon Home">
                         <img 
                             src={footerLogo}
-                            alt="Tachyon Logo" 
+                            alt="Tachyon 2025 Logo" 
                             className="logo_footer"
+                            loading="lazy"
                         />
                     </a>
+                    
                     <div className="paragraph_1 paragraph_1_align_center paragraph_1_margin_bottom_80px">
                         <span className="text-dim">ALL CREDITS TO</span>{' '}
                         <a 
                             href="/team" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
                             className="link_paragraph_1"
+                            aria-label="View Tachyon Team"
                         >
-                            tachyon team
-                        </a>{' '}
-                        {/* <span className="text-dim">THE WRITER AND</span><br />
-                        <span className="text-dim">ILLUSTRATOR OF DEMON SLAYER: KIMETSU NO YAIBA - MANGA</span> */}
+                            TACHYON TEAM
+                        </a>
                     </div>
+                    
                     <div className="paragraph_1 paragraph_1_align_center paragraph_1_medium">
                         <span className="text-dim">WEBSITE DEVELOPED AND DESIGNED BY</span>{' '}
                         <span className="link_paragraph_1">
-                            Tachyon Development Team
+                            TACHYON DEVELOPMENT TEAM
                         </span>
                     </div>
                 </div>
             </div>
             
-            <div className="spark">
-                <SparkSVG scale={1} />
-            </div>
-            <div className="spark-1">
-                <SparkSVG scale={0.85} />
-            </div>
-            <div className="spark-2">
-                <SparkSVG scale={0.7} />
-            </div>
-            <div className="spark-4">
-                <SparkSVG scale={0.75} />
-            </div>
-        </div>
+            {/* Only render sparks on non-mobile devices */}
+            {!isMobile && (
+                <>
+                    <div className="spark" aria-hidden="true">
+                        <SparkSVG scale={1} />
+                    </div>
+                    <div className="spark-1" aria-hidden="true">
+                        <SparkSVG scale={0.85} />
+                    </div>
+                    <div className="spark-2" aria-hidden="true">
+                        <SparkSVG scale={0.7} />
+                    </div>
+                    <div className="spark-4" aria-hidden="true">
+                        <SparkSVG scale={0.75} />
+                    </div>
+                </>
+            )}
+        </footer>
     );
-}
+};
 
 export default Footer;
